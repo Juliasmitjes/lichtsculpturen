@@ -1,0 +1,142 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    /* Natuurlijke kleuren pallete */
+       --background: hsl(35, 25%, 92%);
+    --foreground: hsl(25, 15%, 25%);
+ /* Donkerbruin */
+
+    --card: 40 30% 88%; /* Zacht beige */
+    --card-foreground: 25 15% 30%;
+
+    --popover: 38 28% 90%;
+    --popover-foreground: 25 15% 25%;
+
+    /* Terracotta primair */
+    --primary: 15 65% 55%; /* Terracotta */
+    --primary-foreground: 35 25% 92%;
+    --primary-warm: 12 70% 50%; /* Diepere terracotta */
+    --primary-light: 18 55% 65%; /* Lichtere terracotta */
+
+    /* Warm groen secundair */
+    --secondary: 85 25% 45%; /* Olijfgroen */
+    --secondary-foreground: 35 25% 92%;
+    --secondary-warm: 80 30% 35%; /* Dieper groen */
+    --secondary-light: 90 20% 55%; /* Lichter groen */
+
+    /* Oker accent */
+    --accent: 45 50% 60%; /* Gouden oker */
+    --accent-foreground: 25 15% 25%;
+    --accent-warm: 42 55% 50%; /* Diepere oker */
+    --accent-light: 48 45% 70%; /* Lichtere oker */
+
+    /* Roest highlight */
+    --highlight: 25 60% 45%; /* Roestbruin */
+    --highlight-foreground: 35 25% 92%;
+
+    --muted: 40 20% 82%; /* Zachte beige */
+    --muted-foreground: 25 15% 45%;
+
+    --destructive: 0 65% 55%;
+    --destructive-foreground: 35 25% 92%;
+
+    --border: 35 20% 80%;
+    --input: 38 25% 85%;
+    --ring: 15 65% 55%;
+
+    --radius: 0.75rem;
+
+    /* Gradiënten voor warmte */
+    --gradient-warm: linear-gradient(135deg, hsl(var(--primary)) 0%, hsl(var(--accent)) 50%, hsl(var(--secondary)) 100%);
+    --gradient-earth: linear-gradient(180deg, hsl(var(--background)) 0%, hsl(var(--muted)) 100%);
+    --gradient-sunset: linear-gradient(45deg, hsl(var(--primary-warm)) 0%, hsl(var(--highlight)) 100%);
+    
+    /* Schaduwen met natuurlijke kleuren */
+    --shadow-soft: 0 4px 20px hsl(var(--primary) / 0.1);
+    --shadow-warm: 0 8px 32px hsl(var(--highlight) / 0.15);
+    --shadow-deep: 0 12px 40px hsl(var(--foreground) / 0.1);
+
+    /* Animaties */
+    --transition-smooth: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    --transition-bounce: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+
+  .dark {
+    --background: 25 20% 15%; /* Donkerbruin */
+    --foreground: 35 25% 85%;
+
+    --card: 25 25% 18%;
+    --card-foreground: 35 25% 85%;
+
+    --popover: 25 25% 20%;
+    --popover-foreground: 35 25% 85%;
+
+    --primary: 15 65% 60%;
+    --primary-foreground: 25 20% 15%;
+    --primary-warm: 12 70% 55%;
+    --primary-light: 18 55% 70%;
+
+    --secondary: 85 25% 50%;
+    --secondary-foreground: 25 20% 15%;
+    --secondary-warm: 80 30% 40%;
+    --secondary-light: 90 20% 60%;
+
+    --accent: 45 50% 65%;
+    --accent-foreground: 25 20% 15%;
+    --accent-warm: 42 55% 55%;
+    --accent-light: 48 45% 75%;
+
+    --highlight: 25 60% 50%;
+    --highlight-foreground: 25 20% 15%;
+
+    --muted: 25 15% 25%;
+    --muted-foreground: 35 20% 65%;
+
+    --destructive: 0 65% 60%;
+    --destructive-foreground: 25 20% 15%;
+
+    --border: 25 15% 30%;
+    --input: 25 20% 25%;
+    --ring: 15 65% 60%;
+
+    --gradient-warm: linear-gradient(135deg, hsl(var(--primary)) 0%, hsl(var(--accent)) 50%, hsl(var(--secondary)) 100%);
+    --gradient-earth: linear-gradient(180deg, hsl(var(--background)) 0%, hsl(var(--muted)) 100%);
+    --gradient-sunset: linear-gradient(45deg, hsl(var(--primary-warm)) 0%, hsl(var(--highlight)) 100%);
+    
+    --shadow-soft: 0 4px 20px hsl(var(--foreground) / 0.1);
+    --shadow-warm: 0 8px 32px hsl(var(--primary) / 0.2);
+    --shadow-deep: 0 12px 40px hsl(0 0% 0% / 0.3);
+  }
+}
+
+
+
+ 
+  /* Organische animaties */
+  @keyframes float {
+    0%, 100% { transform: translateY(0px) rotate(0deg); }
+    50% { transform: translateY(-10px) rotate(1deg); }
+  }
+  
+  @keyframes glow {
+    0%, 100% { opacity: 0.8; }
+    50% { opacity: 1; }
+  }
+  
+  @keyframes gradient-shift {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+  
+  /* Handgeschreven font classe */
+  .font-handwritten {
+    font-family: 'Caveat', cursive;
+  }
