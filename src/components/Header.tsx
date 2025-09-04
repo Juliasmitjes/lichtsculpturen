@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Menu, X, Palette } from "lucide-react";
-import { Button } from "./ui/button";
+import { Button, buttonVariants } from "./ui/button";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -15,14 +15,15 @@ const Header = () => {
     <header className="fixed top-0 left-0 right-0 z-50 bg-card/80 backdrop-blur-sm border-b border-border shadow-soft">
       <nav className="container mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
-          {/* Logo */}
+
+          {/* Logo NOG AANP*/}
           <div className="flex items-center gap-2 cursor-pointer" onClick={() => scrollToSection('hero')}>
             <div className="w-10 h-10 bg-gradient-warm rounded-full flex items-center justify-center animate-glow">
-              <Palette className="w-5 h-5 text-primary-foreground" />
+              <Palette className="w-5 h-5 text-primary-foreground text-white" />
             </div>
             <div>
-              <h1 className="text-lg font-medium text-foreground">Julia Smitjes</h1>
-              <p className="text-xs text-muted-foreground font-handwritten">Handgemaakte kunst</p>
+              <h1 className="text-xl font-business font-bold  text-foreground">Jacqueline Tiemens</h1>
+              <p className="text-sm text-muted-foreground font-playful">Handgemaakte kunst</p>
             </div>
           </div>
 
@@ -30,19 +31,20 @@ const Header = () => {
           <div className="hidden md:flex items-center gap-8">
             <button 
               onClick={() => scrollToSection('galerij')}
-              className="text-foreground hover:text-primary transition-colors duration-300"
+              className="text-foreground hover:text-primary text-xl font-business font-bold  transition-colors duration-300"
             >
               Galerij
             </button>
             <button 
               onClick={() => scrollToSection('over-mij')}
-              className="text-foreground hover:text-primary transition-colors duration-300"
+              className="text-foreground hover:text-primary text-xl font-business font-bold transition-colors duration-300"
             >
               Over mij
             </button>
             <Button 
               variant="organic"
               size="sm"
+              className="font-business text-xl font-bold"
               onClick={() => scrollToSection('contact')}
             >
               Contact
