@@ -8,7 +8,7 @@
 
   /* Natuurlijke kleurenpalet */
     --background: 35 30% 94%; /* Warm linnen crème */
-    --foreground: 25 20% 24%; /* Diep warmbruin */
+    --foreground: 20 35% 22%; /* Diep kastanje-bruin, warm en natuurlijk */
 
     --card: 38 32% 90%; /* Zacht beige */
     --card-foreground: 25 20% 28%;
@@ -28,11 +28,12 @@
     --secondary-warm: 32 45% 60%;   /* Terracotta-achtig warm */
     --secondary-light: 40 38% 85%;  /* Zacht crème-zand */
 
-    /* Olijfbruine accentkleur */
-    --accent: 38 35% 42%;            /* Warme olijfbruin */
-    --accent-foreground: 35 30% 94%; /* Licht linnen */
-    --accent-warm: 36 40% 32%;       /* Dieper, rijker bruin-olijf */
-    --accent-light: 44 30% 68%;      /* Zacht beige-olijf highlight */
+   /* Noot / kastanje accentkleur passend bij primary */
+    --accent: 15 65% 50%;            /* Warm kastanjebruin met roodtoon */
+    --accent-foreground: 35 25% 92%; /* Licht linnen, goed leesbaar op warm accent */
+    --accent-warm: 10 70% 38%;       /* Diep, rijk kastanjebruin voor hover/actief */
+    --accent-light: 25 50% 70%;      /* Zachtere warme oranje-beige voor highlights */
+
 
     /* Diep dennegroen highlight */
     --highlight: 120 35% 32%;        /* Warmer donkergroen */

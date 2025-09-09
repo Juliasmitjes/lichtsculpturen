@@ -25,7 +25,7 @@ const Hero = () => {
         <div className="max-w-3xl mx-auto lg:mx-0">
           
           {/* Main Title */}
-          <h1 className="text-5xl lg:text-7xl font-bold text-textff mb-6 leading-tight">
+          <h1 className="text-5xl lg:text-7xl font-bold text-foreground mb-6 leading-tight">
             Licht en warmte
             <span className="block font-playful text-accent text-4xl lg:text-5xl mt-2">
               in alle seizoenen
