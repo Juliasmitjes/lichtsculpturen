@@ -16,14 +16,14 @@ const artworks: ArtworkItem[] = [
     id: 1,
     title: "Lichtsculptuur Boom I",
     category: "sculpturen",
-    image: "",
+    image: `${process.env.PUBLIC_URL}/images/boom1.jpg`,
     description: "Een elegante sculptuur van natuurlijke takken met warme LED-verlichting",
     materials: "Houten takken, LED-lights, linnen"
   },
   {
     id: 2,
     title: "Aardse Abstractie", 
-    category: "schilderijen",
+    category: "sculpturen",
     image: "",
     description: "Organische vormen in warme aardtinten die de natuur vieren",
     materials: "Acryl op linnen"
@@ -31,10 +31,34 @@ const artworks: ArtworkItem[] = [
   {
     id: 3,
     title: "Lichtsculptuur Boom II",
-    category: "sculpturen", 
+    category: "schilderijen", 
     image: "",
     description: "Delicate handgemaakte installatie met zachte gloed",
     materials: "Houten structuur, natuurlijke vezels, LED"
+  },
+  {
+    id: 4,
+    title: "Herfstbos",
+    category: "sculpturen",
+    image: "",
+    description: "Warme oranje en bruine tinten die de essentie van de herfst vastleggen",
+    materials: "Olieverf op doek"
+  },  
+  {
+    id: 5,
+    title: "Lichtsculptuur Ster", 
+    category: "schilderijen",
+    image: "",
+    description: "Stervormige sculptuur met een magische, sprankelende uitstraling",
+    materials: "Metaal, LED-lights, zijde"
+  },
+  {
+    id: 6,
+    title: "Zonsondergang in het Bos",  
+    category: "sculpturen",
+    image: "",
+    description: "Warme gele en rode tinten die een serene zonsondergang in het bos uitbeelden",
+    materials: "Aquarel op papier"
   }
 ];
 
@@ -68,7 +92,7 @@ const Gallery = () => {
           </p>
         </div>
 
-        {/* Filter buttons */}
+        {/* filter buttons */}
         <div className="flex justify-center mb-12">
           <div className="inline-flex rounded-lg bg-card shadow-soft p-1">
             {[
@@ -89,7 +113,7 @@ const Gallery = () => {
           </div>
         </div>
 
-        {/* Gallery Grid */}
+        {/* galerij */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {filteredArtworks.map((artwork, index) => (
             <div
@@ -100,7 +124,7 @@ const Gallery = () => {
               onMouseEnter={() => setHoveredItem(artwork.id)}
               onMouseLeave={() => setHoveredItem(null)}
             >
-              {/* Image Container */}
+              {/* afbeeldingen */}
               <div className="relative overflow-hidden aspect-[4/5]">
                 <img
                   src={artwork.image}
@@ -108,7 +132,7 @@ const Gallery = () => {
                   className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
                 />
                 
-                {/* Overlay */}
+                {/* overlay */}
                 <div className={`absolute inset-0 bg-gradient-sunset opacity-0 group-hover:opacity-80 transition-opacity duration-500 flex items-center justify-center ${
                   hoveredItem === artwork.id ? 'opacity-80' : ''
                 }`}>
