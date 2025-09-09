@@ -176,7 +176,7 @@ const Gallery = () => {
                   </p>
                 )}
 
-                <Button asChild variant="extra" size="sm" className="w-full">
+                <Button asChild variant="default" size="sm" className="w-full">
                   <Link to={`/details/${artwork.id}`}>
                     Meer informatie
                     <ExternalLink className="w-4 h-4" />
