@@ -1,10 +1,23 @@
 import { Button } from "./ui/button";
-import { Leaf, Lightbulb, Heart, Recycle } from "lucide-react";
+import { ChevronDown } from "lucide-react";
+import schilderenVoorbeeld from '../assets/images/schilderenVoorbeeld.jpg';
 
 const About = () => {
   return (
-    <section id="over-mij" className="py-20 bg-background">
-      <div className="container mx-auto px-6">
+    <section id="over-mij" className="relative min-h-screen flex items-center bg-gradient-earth overflow-hidden">
+
+      <div className="absolute inest-0">
+        <img
+        src={schilderenVoorbeeld}
+        alt="schilderen"
+        className="w-full h-full object-cover opacity-80"
+        />
+        <div className="absolute inset-0 bg-gradient-warm opacity-20"></div>
+        <div className="absolute inset-0 bg-background/20"></div>
+      </div>
+
+       
+      <div className="container mx-auto px-6 z-10">
         <div className="max-w-6xl mx-auto">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             
@@ -17,7 +30,7 @@ const About = () => {
                 Duurzame kunst met passie
               </h3>
               
-              <div className="prose prose-lg text-muted-foreground font-business font-bold mb-8">
+              <div className="prose prose-lg text-primary-foreground font-business font-bold mb-8">
                 <p className="mb-4">
                   Ik ben gek op het leven en vind ook veel leuk: getallen, taal, kinderen, kunst. Soms is het lastig kiezen. Gelukkig hoeft niet alles tegelijk. Mijn leven is een avontuurlijke reis van accountant, moeder én kunstenaar. Hoe heerlijk! Vorm kleur en creativiteit. Met hart en handen en altijd met passie. 
                 </p>
@@ -35,57 +48,13 @@ const About = () => {
               </Button>
        
             <Button variant="outlineref" size="lg" onClick={() => {
-              const element = document.getElementById('contact');
+              const element = document.getElementById('verhaal');
               element?.scrollIntoView({ behavior: 'smooth' });
             }}>
-              Contact opnemen
+            Lees meer 
+            <ChevronDown className="w-5 h-5" />
             </Button>
-            </div>
-
-            
-
-            {/* kernwaarden links */}
-            <div className="space-y-6">
-              {[
-                {
-                  icon: Leaf,
-                  title: "Duurzaam",
-                  description: "Bewust materiaalgebruik met maximaal effect. Geen verspilling, wel impact."
-                },
-                {
-                  icon: Lightbulb,
-                  title: "Innovatie", 
-                  description: "Creatieve oplossingen voor moderne uitdagingen. Kunst die meebeweegt met de tijd."
-                },
-                {
-                  icon: Heart,
-                  title: "Handgemaakt",
-                  description: "Elk stuk is uniek en met liefde gemaakt. Persoonlijke aandacht voor details."
-                },
-                {
-                  icon: Recycle,
-                  title: "Herbruikbaar",
-                  description: "Sculpturen die meegroeien met de seizoenen. Van winter naar lente, altijd mooi."
-                }
-              ].map((value, index) => (
-                <div 
-                  key={index}
-                  className="flex items-start gap-4 p-6 bg-card rounded-xl shadow-soft hover:shadow-warm transition-all duration-300 group"
-                >
-                  <div className="flex-shrink-0 w-12 h-12 bg-primary rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                    <value.icon className="w-6 h-6 text-primary-foreground" />
-                  </div>
-                  <div>
-                    <h4 className="text-lg font-semibold text-foreground mb-2">
-                      {value.title}
-                    </h4>
-                    <p className="text-muted-foreground">
-                      {value.description}
-                    </p>
-                  </div>
-                </div>
-              ))}
-            </div>
+            </div>           
           </div>
         </div>
       </div>

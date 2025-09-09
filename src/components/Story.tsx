@@ -1,4 +1,5 @@
 import { Sparkles, TreePine, Lightbulb, Star } from "lucide-react";
+import { Leaf,  Heart, Recycle } from "lucide-react";
 
 const Story = () => {
   return (
@@ -14,8 +15,57 @@ const Story = () => {
             </h2>       
           </div>
 
+          {/* kernwaarden links */}
+            <div className="space-y-6">
+              {[
+                {
+                  icon: Leaf,
+                  title: "Duurzaam",
+                  description: "Bewust materiaalgebruik met maximaal effect. Geen verspilling, wel impact."
+                },
+                {
+                  icon: Lightbulb,
+                  title: "Innovatie", 
+                  description: "Creatieve oplossingen voor moderne uitdagingen. Kunst die meebeweegt met de tijd."
+                },
+                {
+                  icon: Heart,
+                  title: "Handgemaakt",
+                  description: "Elk stuk is uniek en met liefde gemaakt. Persoonlijke aandacht voor details."
+                },
+                {
+                  icon: Recycle,
+                  title: "Herbruikbaar",
+                  description: "Sculpturen die meegroeien met de seizoenen. Van winter naar lente, altijd mooi."
+                }
+              ].map((value, index) => (
+                <div 
+                  key={index}
+                  className="flex items-start gap-4 p-6 bg-card rounded-xl shadow-soft hover:shadow-warm transition-all duration-300 group"
+                >
+                  <div className="flex-shrink-0 w-12 h-12 bg-primary rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                    <value.icon className="w-6 h-6 text-primary-foreground" />
+                  </div>
+                  <div>
+                    <h4 className="text-lg font-semibold text-foreground mb-2">
+                      {value.title}
+                    </h4>
+                    <p className="text-muted-foreground">
+                      {value.description}
+                    </p>
+                  </div>
+                </div>
+              ))}
+            </div>
+
+
+
+
+
           {/* Story Timeline */}
           <div className="space-y-12">
+
+            
             
             {/* Opening Scene */}
             <div className="relative">
