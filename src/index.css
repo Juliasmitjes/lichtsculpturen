@@ -2,9 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
-*/
 
 @layer base {
   :root {
@@ -18,11 +15,11 @@ All colors MUST be HSL.
     --popover: 38 28% 90%;
     --popover-foreground: 25 15% 25%;
 
-    /* Terracotta primair */
-    --primary: 15 65% 55%; /* Terracotta */
+    /* Mosgroen primair */
+    --primary: 77 32% 45%; /* Mosgroen */
     --primary-foreground: 35 25% 92%;
-    --primary-warm: 12 70% 50%; /* Diepere terracotta */
-    --primary-light: 18 55% 65%; /* Lichtere terracotta */
+    --primary-warm: 72 40% 38%;   /* Diepere, warmere mosgroen */
+    --primary-light: 82 30% 65%;  /* Lichtere, frisse kleur met een vleugje lentegras */
 
     /* Warm groen secundair */
     --secondary: 85 25% 45%; /* Olijfgroen */
@@ -30,15 +27,15 @@ All colors MUST be HSL.
     --secondary-warm: 80 30% 35%; /* Dieper groen */
     --secondary-light: 90 20% 55%; /* Lichter groen */
 
-    /* Oker accent */
-    --accent: 45 50% 60%; /* Gouden oker */
-    --accent-foreground: 25 15% 25%;
-    --accent-warm: 42 55% 50%; /* Diepere oker */
-    --accent-light: 48 45% 70%; /* Lichtere oker */
+    /* Olijfbruine accentkleur */
+    --accent: 60 20% 40%;           /* Olijfbruin, gedempt en natuurlijk */
+    --accent-foreground: 42 25% 92%; /* Licht linnen voor goede leesbaarheid */
+    --accent-warm: 58 25% 35%;       /* Donkerder olijf voor hover/actieve states */
+    --accent-light: 62 30% 65%;      /* Zacht olijfgroen/beige voor achtergrond of highlights */
 
-    /* Roest highlight */
-    --highlight: 25 60% 45%; /* Roestbruin */
-    --highlight-foreground: 35 25% 92%;
+   /* Warme amberkleurige highlight */
+    --highlight: 32 45% 50%;           /* Warme amber met een aardse ondertoon */
+    --highlight-foreground: 36 20% 92%; /* Licht linnenwit voor goede leesbaarheid */
 
     --muted: 40 20% 82%; /* Zachte beige */
     --muted-foreground: 25 15% 45%;

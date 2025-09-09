@@ -18,7 +18,7 @@ const Header = () => {
 
           {/* Logo NOG AANP*/}
           <div className="flex items-center gap-2 cursor-pointer" onClick={() => scrollToSection('hero')}>
-            <div className="w-10 h-10 bg-gradient-warm rounded-full flex items-center justify-center animate-glow">
+            <div className="w-10 h-10 bg-primary rounded-full flex items-center justify-center animate-glow">
               <Palette className="w-5 h-5 text-primary-foreground text-white" />
             </div>
             <div>
