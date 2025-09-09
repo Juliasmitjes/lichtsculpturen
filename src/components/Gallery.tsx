@@ -3,6 +3,10 @@ import { Button } from "./ui/button";
 import { ExternalLink, Heart } from "lucide-react";
 import boom1Img from "../assets/images/boom1.jpg";
 import boom2Img from "../assets/images/boom2.jpeg";
+import schilderij1Img from "../assets/images/schilderij1.jpg";
+import boom3Img from "../assets/images/boom3.jpg";
+import schilderij2Img from "../assets/images/schilderij2.jpg";
+import boom4Img from "../assets/images/boom4.jpeg";
 
 interface ArtworkItem {
   id: number;
@@ -32,35 +36,35 @@ const artworks: ArtworkItem[] = [
   },
   {
     id: 3,
-    title: "Lichtsculptuur Boom II",
+    title: "Landschap",
     category: "schilderijen", 
-    image: "",
-    description: "Delicate handgemaakte installatie met zachte gloed",
-    materials: "Houten structuur, natuurlijke vezels, LED"
+    image: schilderij1Img,
+    description: "Koele tinten die een Scandinavisch landschap oproepen",
+    materials: "Olieverf op doek"
   },
   {
     id: 4,
-    title: "Herfstbos",
+    title: "Bubbellicht",
     category: "sculpturen",
-    image: "",
-    description: "Warme oranje en bruine tinten die de essentie van de herfst vastleggen",
-    materials: "Olieverf op doek"
+    image: boom3Img,
+    description: "Warme oranje en bruine tinten met zachte gloed",
+    materials: "Hout en natuurlijke vezels"
   },  
   {
     id: 5,
-    title: "Lichtsculptuur Ster", 
+    title: "Boslandschap", 
     category: "schilderijen",
-    image: "",
-    description: "Stervormige sculptuur met een magische, sprankelende uitstraling",
-    materials: "Metaal, LED-lights, zijde"
+    image: schilderij2Img,
+    description: "Warme gele en rode tinten die een warme dag in het bos uitbeelden",
+    materials: "Aquarel op papier"
   },
   {
     id: 6,
-    title: "Zonsondergang in het Bos",  
+    title: "Lentelicht",  
     category: "sculpturen",
-    image: "",
-    description: "Warme gele en rode tinten die een serene zonsondergang in het bos uitbeelden",
-    materials: "Aquarel op papier"
+    image: boom4Img,
+    description: "Feestelijke, vrolijke sculptuur met een frisse uitstraling",
+    materials: "Metaal, licht, linnen"
   }
 ];
 
