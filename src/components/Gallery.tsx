@@ -49,21 +49,26 @@ const Gallery = () => {
   return (
     <section id="galerij" className="py-20 bg-gradient-earth">
       <div className="container mx-auto px-6">
-        {/* Section Header */}
+        {/* header */}
         <div className="text-center mb-16">
-          <h2 className="font-handwritten text-4xl lg:text-5xl text-accent mb-4">
+          <h2 className="font-playful text-4xl lg:text-5xl text-accent mb-4">
             Mijn creaties
           </h2>
           <h3 className="text-3xl lg:text-4xl font-bold text-foreground mb-6">
-            Kunst met een verhaal
+            Licht in alle seizoenen
           </h3>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Elke sculptuur en elk schilderij is met de hand gemaakt, 
-            met aandacht voor duurzaamheid en natuurlijke schoonheid.
+          <p className="text-lg text-muted-foreground font-business font-bold max-w-2xl mx-auto">
+            Kerstbomen passen niet in deze tijd van duurzaamheidsopgaven. We moeten bomen planten en niet kappen. Een kunstboom als alternatief? Dat is ook niet echt duurzaam. 
+            <br />
+            <br />
+            Ik ben de uitdaging aangegaan om met minimaal materiaal een maximaal effect te bereiken. Dat is gelukt! Mijn lichtsculpturen hebben een grootse uitstraling. En het materiaalgebruik is beperkt: drie stokken, wat ijzeren ringen, een lichtsnoer en wat stof en vilt. Voordeel is ook dat je de sculptuur na Kerst makkelijk opbergt. Eén doos, die stokken en de ringen met een haak aan de muur. Dat is alles. 
+            <br />
+            <br />
+            Maar je kunt de sculptuur ook laten staan. Met wat andere hangers, maak je er een Paas- of herfstcreatie van. Eigenlijk zijn de lichtsculpturen in alle seizoenen leuk.
           </p>
         </div>
 
-        {/* Filter Buttons */}
+        {/* Filter buttons */}
         <div className="flex justify-center mb-12">
           <div className="inline-flex rounded-lg bg-card shadow-soft p-1">
             {[
@@ -75,7 +80,7 @@ const Gallery = () => {
                 key={filter.key}
                 variant={activeCategory === filter.key ? "default" : "ghost"}
                 size="sm"
-                onClick={() => setActiveCategory(filter.key as any)}
+                onClick={() => setActiveCategory(filter.key as "alle" | "sculpturen" | "schilderijen")}
                 className="mx-1"
               >
                 {filter.label}
