@@ -27,10 +27,10 @@ const About = () => {
                 Mijn verhaal
               </h2>
               <h3 className="text-3xl lg:text-4xl font-bold text-foreground mb-6">
-                Duurzame kunst met passie
+                Veelzijdig en bevlogen
               </h3>
               
-              <div className="prose prose-lg text-primary-foreground font-business font-bold mb-8">
+              <div className="prose prose-lg text-primary-foreground font-business font-bold text-lg mb-8">
                 <p className="mb-4">
                   Ik ben gek op het leven en vind ook veel leuk: getallen, taal, kinderen, kunst. Soms is het lastig kiezen. Gelukkig hoeft niet alles tegelijk. Mijn leven is een avontuurlijke reis van accountant, moeder én kunstenaar. Hoe heerlijk! Vorm kleur en creativiteit. Met hart en handen en altijd met passie. 
                 </p>

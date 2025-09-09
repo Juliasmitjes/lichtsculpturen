@@ -4,18 +4,11 @@ import { Leaf,  Heart, Recycle } from "lucide-react";
 const Story = () => {
   return (
     <section id="verhaal" className="py-20 bg-gradient-earth relative overflow-hidden">   
-      
-      <div className="container mx-auto px-6">
-        <div className="max-w-5xl mx-auto">
-          
-          {/* header */}
-          <div className="text-center mb-20 relative">
-            <h2 className="font-playful text-4xl lg:text-5xl text-accent mb-4">
-              Schoonheid is overal
-            </h2>       
-          </div>
 
-          {/* kernwaarden links */}
+     <div className="container mx-auto px-6 max-w-5xl">
+      <div className="grid lg:grid-cols-2 gap-16 items-center">
+
+         {/* kernwaarden links */}
             <div className="space-y-6">
               {[
                 {
@@ -57,6 +50,22 @@ const Story = () => {
                 </div>
               ))}
             </div>
+
+             {/* header */}
+          <div className="text-center mb-20 relative">
+            <h2 className="font-playful text-4xl lg:text-5xl text-accent mb-4">
+              Schoonheid is overal
+            </h2>       
+          </div>
+            
+         </div>
+      </div>
+
+         
+          
+         
+
+          
 
 
 
@@ -141,8 +150,7 @@ const Story = () => {
               </div>
             </div>
 
-          </div>
-        </div>
+        
       </div>
     </section>
   );
