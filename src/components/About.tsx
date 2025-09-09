@@ -31,7 +31,7 @@ const About = () => {
                 </p>
               </div>
 
-              <Button className="mr-2" variant="organic" size="lg" onClick={() => {
+              <Button className="mr-4" variant="organic" size="lg" onClick={() => {
                 const element = document.getElementById('galerij');
                 element?.scrollIntoView({ behavior: 'smooth' });
               }}>
