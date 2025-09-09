@@ -13,37 +13,29 @@ const Hero = () => {
       <div className="absolute inset-0">
         <img 
           src="/images/linnen.jpg"
-          alt="Julia's kunstwerkplaats met natuurlijke materialen" 
-          className="w-full h-full object-cover opacity-60"
+          alt="linnen" 
+          className="w-full h-full object-cover"
         />
-        <div className="absolute inset-0 bg-gradient-warm opacity-30"></div>
+        <div className="absolute inset-0 "></div>
         <div className="absolute inset-0 bg-background/20"></div>
       </div>
-
-      {/* Floating Elements */}
-      <div className="absolute top-20 right-10 w-20 h-20 bg-accent/20 rounded-full animate-float hidden lg:block"></div>
-      <div className="absolute bottom-32 left-8 w-12 h-12 bg-primary/20 rounded-full animate-float animation-delay-1000 hidden lg:block"></div>
 
       {/* Content */}
       <div className="relative container mx-auto px-6 py-20 text-center lg:text-left">
         <div className="max-w-3xl mx-auto lg:mx-0">
-          {/* Subtitle */}
-          <p className="font-handwritten text-2xl lg:text-3xl text-primary mb-4 animate-glow">
-            Handgemaakte kunst met ziel
-          </p>
           
           {/* Main Title */}
-          <h1 className="text-5xl lg:text-7xl font-bold text-foreground mb-6 leading-tight">
+          <h1 className="text-5xl lg:text-7xl font-bold text-textff mb-6 leading-tight">
             Licht en warmte
-            <span className="block font-handwritten text-accent text-4xl lg:text-5xl mt-2">
+            <span className="block font-playful text-accent text-4xl lg:text-5xl mt-2">
               in alle seizoenen
             </span>
           </h1>
 
           {/* Description */}
-          <p className="text-lg lg:text-xl text-muted-foreground mb-8 max-w-2xl leading-relaxed">
-            Ontdek mijn unieke lichtsculpturen en schilderijen, gemaakt met liefde voor natuurlijke 
-            materialen en duurzame kunst. Elk stuk vertelt een verhaal van warmte en creativiteit.
+          <p className="text-lg lg:text-xl text-foreground font-business font-bold mb-8 max-w-2xl leading-relaxed">
+            Ontdek mijn lichtsculpturen. Gemaakt met liefde voor natuurlijke 
+            materialen en duurzame kunst. Ieder stuk is uniek.
           </p>
 
           {/* CTA Buttons */}
@@ -52,10 +44,10 @@ const Hero = () => {
               variant="hero" 
               size="hero"
               onClick={scrollToGallery}
-              className="animate-float"
+              className=""
             >
               Bekijk mijn werk
-              <ChevronDown className="w-5 h-5 animate-bounce" />
+              <ChevronDown className="w-5 h-5" />
             </Button>
             <Button 
               variant="outline" 
@@ -68,13 +60,6 @@ const Hero = () => {
               Leer mij kennen
             </Button>
           </div>
-        </div>
-      </div>
-
-      {/* Scroll Indicator */}
-      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
-        <div className="w-6 h-10 border-2 border-primary rounded-full flex justify-center">
-          <div className="w-1 h-3 bg-primary rounded-full mt-2 animate-pulse"></div>
         </div>
       </div>
     </section>
