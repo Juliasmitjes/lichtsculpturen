@@ -72,7 +72,7 @@ const About = () => {
                   key={index}
                   className="flex items-start gap-4 p-6 bg-card rounded-xl shadow-soft hover:shadow-warm transition-all duration-300 group"
                 >
-                  <div className="flex-shrink-0 w-12 h-12 bg-gradient-warm rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                  <div className="flex-shrink-0 w-12 h-12 bg-primary rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
                     <value.icon className="w-6 h-6 text-primary-foreground" />
                   </div>
                   <div>
