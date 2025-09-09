@@ -193,7 +193,7 @@ const Gallery = () => {
             <h4 className="font-playful text-2xl text-accent mb-2">
               Geïnteresseerd?
             </h4>
-            <p className="text-muted-foreground mb-4">
+            <p className="text-muted-foreground font-business font-bold mb-4">
               Ik hoor graag van je! Neem contact met mij op
             </p>
             <Button variant="hero" onClick={() => {
