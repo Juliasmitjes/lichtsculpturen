@@ -16,7 +16,7 @@ const buttonVariants = cva(
         outline:
           "border border-primary text-primary bg-white/30 backdrop-blur-md shadow-sm hover:bg-primary/50 hover:text-primary-foreground hover:shadow-soft transition-all duration-300",
         extra:
-          "border border-accent-warm text-primary-foreground bg-accent-warm/60 backdrop-blur-md shadow-sm hover:bg-accent-warm/40 hover:text-primary-foreground hover:shadow-soft transition-all duration-300",
+          "border border-primary-warm text-primary-foreground bg-primary-warm/60 backdrop-blur-md shadow-sm hover:bg-primary-warm/40 hover:text-primary-foreground hover:shadow-soft transition-all duration-300",
         secondary:
           "bg-secondary text-secondary-foreground shadow-sm hover:bg-secondary-warm transition-all duration-300",
         ghost: "hover:bg-accent hover:text-accent-foreground transition-all duration-300",

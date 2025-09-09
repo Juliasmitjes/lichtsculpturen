@@ -8,34 +8,26 @@ const About = () => {
         <div className="max-w-6xl mx-auto">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             
-            {/* Content Side */}
+            {/* content */}
             <div>
-              <h2 className="font-handwritten text-4xl lg:text-5xl text-accent mb-4">
+              <h2 className="font-playful text-4xl lg:text-5xl text-accent mb-4">
                 Mijn verhaal
               </h2>
               <h3 className="text-3xl lg:text-4xl font-bold text-foreground mb-6">
                 Duurzame kunst met passie
               </h3>
               
-              <div className="prose prose-lg text-muted-foreground mb-8">
+              <div className="prose prose-lg text-muted-foreground font-business font-bold mb-8">
                 <p className="mb-4">
-                  Kerstbomen passen niet in deze tijd van duurzaamheidsopgaven. We moeten 
-                  bomen planten en niet kappen. Een kunstboom als alternatief? 
-                  Dat is ook niet echt duurzaam.
+                  Ik ben gek op het leven en vind ook veel leuk: getallen, taal, kinderen, kunst. Soms is het lastig kiezen. Gelukkig hoeft niet alles tegelijk. Mijn leven is een avontuurlijke reis van accountant, moeder én kunstenaar. Hoe heerlijk! Vorm kleur en creativiteit. Met hart en handen en altijd met passie. 
                 </p>
                 
                 <p className="mb-4">
-                  Ik ben de uitdaging aangegaan om met minimaal materiaal een maximaal 
-                  effect te bereiken. Dat is gelukt! Mijn lichtsculpturen hebben een 
-                  grootse uitstraling en het materiaalgebruik is beperkt: drie stokken, 
-                  wat ijzeren ringen, een lichtsnoer en wat stof en vilt.
+                  Ik maak pasteltekeningen en lichtsculpturen.
                 </p>
                 
-                <p className="mb-6">
-                  Het voordeel is ook dat je de sculptuur na Kerst makkelijk opbergt. 
-                  Maar je kunt de sculptuur ook laten staan - met wat andere hangers 
-                  maak je er een Paas- of herfstcreatie van. Eigenlijk zijn de 
-                  lichtsculpturen in alle seizoenen leuk.
+                <p className="mb-6 text-foreground">
+                  Nieuwsgierig? 
                 </p>
               </div>
 
@@ -47,12 +39,12 @@ const About = () => {
               </Button>
             </div>
 
-            {/* Values Side */}
+            {/* kernwaarden links */}
             <div className="space-y-6">
               {[
                 {
                   icon: Leaf,
-                  title: "Duurzaamheid",
+                  title: "Duurzaam",
                   description: "Minimaal materiaalgebruik voor maximaal effect. Geen verspilling, wel impact."
                 },
                 {
