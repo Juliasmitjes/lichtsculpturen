@@ -1,6 +1,8 @@
 import { useState } from "react";
 import { Button } from "./ui/button";
 import { ExternalLink, Heart } from "lucide-react";
+import boom1Img from "../assets/images/boom1.jpg";
+import boom2Img from "../assets/images/boom2.jpeg";
 
 interface ArtworkItem {
   id: number;
@@ -14,19 +16,19 @@ interface ArtworkItem {
 const artworks: ArtworkItem[] = [
   {
     id: 1,
-    title: "Lichtsculptuur Boom I",
+    title: "Najaarslicht",
     category: "sculpturen",
-    image: `${process.env.PUBLIC_URL}/images/boom1.jpg`,
-    description: "Een elegante sculptuur van natuurlijke takken met warme LED-verlichting",
-    materials: "Houten takken, LED-lights, linnen"
+    image: boom1Img,
+    description: "Organische vormen in warme aardtinten",
+    materials: "Hout, warme kleuren, denneappels"
   },
   {
     id: 2,
-    title: "Aardse Abstractie", 
+    title: "Licht in stijl", 
     category: "sculpturen",
-    image: "",
-    description: "Organische vormen in warme aardtinten die de natuur vieren",
-    materials: "Acryl op linnen"
+    image: boom2Img,
+    description: "Een elegante sculptuur van klassieke vorm",
+    materials: "Goud en linnen"
   },
   {
     id: 3,
