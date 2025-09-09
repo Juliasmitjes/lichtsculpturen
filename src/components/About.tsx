@@ -31,13 +31,22 @@ const About = () => {
                 </p>
               </div>
 
-              <Button variant="organic" size="lg" onClick={() => {
+              <Button className="mr-2" variant="organic" size="lg" onClick={() => {
                 const element = document.getElementById('galerij');
                 element?.scrollIntoView({ behavior: 'smooth' });
               }}>
                 Bekijk mijn werk
               </Button>
+       
+            <Button variant="hero" size="lg" onClick={() => {
+              const element = document.getElementById('contact');
+              element?.scrollIntoView({ behavior: 'smooth' });
+            }}>
+              Contact opnemen
+            </Button>
             </div>
+
+            
 
             {/* kernwaarden links */}
             <div className="space-y-6">

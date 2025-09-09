@@ -185,25 +185,7 @@ const Gallery = () => {
               </div>
             </div>
           ))}
-        </div>
-
-        {/* geinteresseerd hokje */}
-        <div className="text-center mt-16">
-          <div className="bg-card rounded-2xl p-8 shadow-warm inline-block">
-            <h4 className="font-playful text-2xl text-accent mb-2">
-              Geïnteresseerd?
-            </h4>
-            <p className="text-muted-foreground font-business font-bold mb-4">
-              Ik hoor graag van je! Neem contact met mij op
-            </p>
-            <Button variant="hero" onClick={() => {
-              const element = document.getElementById('contact');
-              element?.scrollIntoView({ behavior: 'smooth' });
-            }}>
-              Contact opnemen
-            </Button>
-          </div>
-        </div>
+        </div>       
       </div>
     </section>
   );
