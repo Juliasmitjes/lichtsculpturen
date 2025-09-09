@@ -1,5 +1,6 @@
 import { Button } from "./ui/button";
 import { ChevronDown } from "lucide-react";
+import linnenImg from "../assets/images/linnen.jpg";
 
 const Hero = () => {
   const scrollToGallery = () => {
@@ -12,7 +13,7 @@ const Hero = () => {
       {/* Background Image with Overlay */}
       <div className="absolute inset-0">
         <img 
-          src="/images/linnen.jpg"
+          src={linnenImg}
           alt="linnen" 
           className="w-full h-full object-cover opacity-80"
         />

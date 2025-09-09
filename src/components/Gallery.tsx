@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Button } from "./ui/button";
 import { ExternalLink, Heart } from "lucide-react";
+import { Link }  from "react-router-dom";
 import boom1Img from "../assets/images/boom1.jpg";
 import boom2Img from "../assets/images/boom2.jpeg";
 import schilderij1Img from "../assets/images/schilderij1.jpg";
@@ -96,7 +97,11 @@ const Gallery = () => {
             <br />
             Maar je kunt de sculptuur ook laten staan. Met wat andere hangers, maak je er een Paas- of herfstcreatie van. Eigenlijk zijn de lichtsculpturen in alle seizoenen leuk.
           </p>
+          <p className="text-lg text-foreground font-business font-bold max-w-2xl mx-auto mt-10">
+          Nieuwsgierig? Kijk hieronder
+          </p>
         </div>
+       
 
         {/* filter buttons */}
         <div className="flex justify-center mb-12">
@@ -131,27 +136,29 @@ const Gallery = () => {
               onMouseLeave={() => setHoveredItem(null)}
             >
               {/* afbeeldingen */}
-              <div className="relative overflow-hidden aspect-[4/5]">
+              <Link to={`/details/${artwork.id}`} className="relative overflow-hidden aspect-[4/5] block group">
                 <img
                   src={artwork.image}
                   alt={artwork.title}
                   className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
                 />
-                
+
                 {/* overlay */}
-                <div className={`absolute inset-0 bg-gradient-sunset opacity-0 group-hover:opacity-80 transition-opacity duration-500 flex items-center justify-center ${
-                  hoveredItem === artwork.id ? 'opacity-80' : ''
-                }`}>
+                <div
+                  className={`absolute inset-0 bg-primary opacity-0 group-hover:opacity-80 transition-opacity duration-500 flex items-center justify-center ${
+                    hoveredItem === artwork.id ? 'opacity-80 cursor-pointer' : ''
+                  }`}
+                >
                   <div className="text-center p-6">
                     <Heart className="w-8 h-8 text-primary-foreground mx-auto mb-2" />
-                    <p className="text-primary-foreground font-medium">Bekijk details</p>
+                    <p className="text-primary-foreground font-business font-bold">Bekijk details</p>
                   </div>
                 </div>
-              </div>
+              </Link>
 
-              {/* Content */}
+              {/* content */}
               <div className="p-6">
-                <span className="inline-block bg-accent/20 text-accent-foreground text-xs font-medium px-3 py-1 rounded-full mb-3">
+                <span className="inline-block bg-secondary text-accent-foreground text-sm font-business font-bold px-3 py-1 rounded-full mb-3">
                   {artwork.category === "sculpturen" ? "Lichtsculptuur" : "Schilderij"}
                 </span>
                 
@@ -159,33 +166,35 @@ const Gallery = () => {
                   {artwork.title}
                 </h4>
                 
-                <p className="text-muted-foreground text-sm mb-3">
+                <p className="text-muted-foreground font-business font-bold mb-3">
                   {artwork.description}
                 </p>
                 
                 {artwork.materials && (
-                  <p className="text-xs text-accent-warm font-medium mb-4">
+                  <p className="text-sm text-accent-warm font-business font-bold mb-4">
                     Materialen: {artwork.materials}
                   </p>
                 )}
 
-                <Button variant="outline" size="sm" className="w-full">
-                  Meer informatie
-                  <ExternalLink className="w-4 h-4" />
-                </Button>
+                <Button asChild variant="extra" size="sm" className="w-full">
+                  <Link to={`/details/${artwork.id}`}>
+                    Meer informatie
+                    <ExternalLink className="w-4 h-4" />
+                  </Link>
+              </Button>
               </div>
             </div>
           ))}
         </div>
 
-        {/* Call to Action */}
+        {/* geinteresseerd hokje */}
         <div className="text-center mt-16">
           <div className="bg-card rounded-2xl p-8 shadow-warm inline-block">
-            <h4 className="font-handwritten text-2xl text-accent mb-2">
+            <h4 className="font-playful text-2xl text-accent mb-2">
               Geïnteresseerd?
             </h4>
             <p className="text-muted-foreground mb-4">
-              Neem contact op voor meer informatie over beschikbaarheid en prijzen
+              Ik hoor graag van je! Neem contact met mij op
             </p>
             <Button variant="hero" onClick={() => {
               const element = document.getElementById('contact');
