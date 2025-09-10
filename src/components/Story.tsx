@@ -118,7 +118,7 @@ const Story = () => {
 
           
           {/* waarden */}
-          <div className="grid lg:grid-cols-2 gap-8 mb-24 my-10">
+          <div className="grid font-business font-bold lg:grid-cols-2 gap-8 mb-24 my-10">
             {coreValues.map((value, index) => (
               <div
                 key={index}

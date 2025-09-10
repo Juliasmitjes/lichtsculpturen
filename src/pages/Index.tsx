@@ -3,6 +3,8 @@ import Hero from "../components/Hero";
 import Gallery from "../components/Gallery";
 import About from "../components/About";
 import Story from "../components/Story";
+import Contact from "../components/Contact";
+import Footer from "../components/Footer";
 
 const Index = () => {
   return (
@@ -12,6 +14,8 @@ const Index = () => {
       <Gallery />
       <About />
       <Story />
+      <Contact />
+      <Footer />
     </main>
   );
 };
