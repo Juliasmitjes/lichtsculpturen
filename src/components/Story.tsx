@@ -1,5 +1,7 @@
 import linnenTexture from '../assets/images/linnenTexture.jpg';
 import { Lightbulb, Leaf,  Heart, Recycle } from "lucide-react";
+import { Button } from "./ui/button";
+import { ChevronDown } from "lucide-react";
 
 const Story = () => {
     const coreValues = [
@@ -29,6 +31,11 @@ const Story = () => {
     },
   ];
 
+  const scrollToGallery = () => {
+    const element = document.getElementById('galerij');
+    element?.scrollIntoView({ behavior: 'smooth' });
+  };
+
 
   return (
     <section id="verhaal">
@@ -55,7 +62,7 @@ const Story = () => {
               </div>
 
               <div className="border-l-4 border-accent pl-6">
-                <h2 className="story-quote text-xl mb-4">"Zullen we eens zonder boom?"</h2>
+                <h2 className="text-xl mb-4">"Zullen we eens zonder boom?"</h2>
                 <p>
                   'Zullen we eens zonder boom?', probeerde ik. Protest bij man en kinderen. 'Er zijn alternatieven, 
                   zoals een kunstboom.' 'Nee mam, hartstikke kitsch en zo'n nepboom is ook niet duurzaam'. Daarmee 
@@ -66,7 +73,7 @@ const Story = () => {
               </div>
 
               <div>
-                <h2 className="story-heading text-2xl mb-4">De uitdaging</h2>
+                <h2 className="text-2xl mb-4">De uitdaging</h2>
                 <p>
                   Ik dacht aan de glinsterende kiezels in mijn jeugd. Er is zoveel schoonheid. Het moet mogelijk 
                   zijn om een beter alternatief te bedenken. Ik ga het proberen! Ik zei tegen man en kinderen, 
@@ -78,7 +85,7 @@ const Story = () => {
               </div>
 
               <div className="bg-secondary/50 rounded-xl p-6">
-                <h2 className="story-heading text-2xl mb-4">Uiteindelijk is het gelukt!</h2>
+                <h2 className="text-2xl mb-4">Uiteindelijk is het gelukt!</h2>
                 <p>
                   Een feestelijke lichtbron, duurzaam en met een wow-effect. Zo simpel kan schoonheid zijn.
                 </p>
@@ -88,17 +95,22 @@ const Story = () => {
             {/* CTA */}
             <div className="mt-12 text-center">
               <div className="inline-flex space-x-4">
-                <a 
-                  href="#" 
-                  className="px-6 py-3 bg-accent text-accent-foreground rounded-lg hover:opacity-90 transition-opacity shadow-soft"
-                >
-                  Bekijk de lichtsculpturen
-                </a>
+                <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+                  <Button 
+                    variant="hero" 
+                    size="hero"
+                    onClick={scrollToGallery}
+                    className="bg-accent"
+                  >
+                    Bekijk lichtsculpturen
+                  </Button>
+                 </div>
+
                 <a 
                   href="#" 
                   className="px-6 py-3 border border-primary text-primary rounded-lg hover:bg-primary hover:text-primary-foreground transition-colors"
                 >
-                  Leer meer over mij
+                  Contact
                 </a>
               </div>
             </div>
@@ -110,7 +122,7 @@ const Story = () => {
             {coreValues.map((value, index) => (
               <div
                 key={index}
-                className="flex items-start gap-5 p-6 bg-card rounded-2xl shadow-soft hover:shadow-warm transition-all duration-300 group"
+                className="flex items-start gap-5 p-6 bg-card/80 rounded-2xl shadow-soft hover:shadow-warm transition-all duration-300 group"
               >
                 <div className="flex-shrink-0 w-14 h-14 bg-primary rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
                   <value.icon className="w-6 h-6 text-primary-foreground" />
