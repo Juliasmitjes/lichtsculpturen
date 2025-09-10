@@ -1,9 +1,9 @@
 import linnenTexture from '../assets/images/linnenTexture.jpg';
 import { Lightbulb, Leaf,  Heart, Recycle } from "lucide-react";
 import { Button } from "./ui/button";
-import { ChevronDown } from "lucide-react";
 
 const Story = () => {
+
     const coreValues = [
     {
       icon: Leaf,
@@ -31,8 +31,8 @@ const Story = () => {
     },
   ];
 
-  const scrollToGallery = () => {
-    const element = document.getElementById('galerij');
+    const scrollToSection = (sectionId: string) => {
+    const element = document.getElementById(sectionId);
     element?.scrollIntoView({ behavior: 'smooth' });
   };
 
@@ -98,20 +98,20 @@ const Story = () => {
                 <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
                   <Button 
                     variant="hero" 
-                    size="hero"
-                    onClick={scrollToGallery}
+                    size="lg"
+                    onClick={() => scrollToSection('galerij')}
                     className="bg-accent"
                   >
                     Bekijk lichtsculpturen
                   </Button>
                  </div>
 
-                <a 
-                  href="#" 
-                  className="px-6 py-3 border border-primary text-primary rounded-lg hover:bg-primary hover:text-primary-foreground transition-colors"
-                >
-                  Contact
-                </a>
+               <Button 
+               variant="outlineref" 
+               size="lg"
+               onClick={() => scrollToSection('contact')}>
+                Contact
+                </Button>
               </div>
             </div>
           </div>
