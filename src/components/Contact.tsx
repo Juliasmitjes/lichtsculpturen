@@ -31,48 +31,48 @@ const Contact = () => {
       <div className="container mx-auto px-6">
         <div className="max-w-6xl mx-auto">
           
-          {/* Section Header */}
+          {/* header */}
           <div className="text-center mb-16">
-            <h2 className="font-handwritten text-4xl lg:text-5xl text-accent mb-4">
-              Laten we praten
+            <h2 className="font-playful text-4xl lg:text-5xl text-accent mb-4">
+              Ik hoor graag van je!
             </h2>
             <h3 className="text-3xl lg:text-4xl font-bold text-foreground mb-6">
               Neem contact op
             </h3>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+            <p className="text-lg text-muted-foreground font-business font-bold max-w-2xl mx-auto">
               Nieuwsgierig naar mijn werk? Wil je meer weten over een specifieke sculptuur 
-              of schilderij? Ik hoor graag van je!
+              of schilderij? 
             </p>
           </div>
 
           <div className="grid lg:grid-cols-2 gap-16">
             
-            {/* Contact Info */}
+            {/* info */}
             <div className="space-y-8">
               <div>
                 <h4 className="text-2xl font-semibold text-foreground mb-6">
                   Kom langs in mijn atelier
                 </h4>
-                <p className="text-muted-foreground mb-8">
-                  In mijn atelier kun je mijn werk van dichtbij bekijken en voelen. 
-                  Maak een afspraak en ontdek de verhalen achter elke creatie.
+                <p className="text-muted-foreground font-business font-bold mb-8">
+                  In mijn atelier kun je mijn werk van dichtbij bekijken. 
+                  Maak een afspraak en ontdek mijn creaties.
                 </p>
               </div>
 
-              {/* Contact Details */}
+              {/* details */}
               <div className="space-y-6">
                 {[
                   {
                     icon: Mail,
                     title: "Email",
-                    detail: "julia@example.com",
-                    action: "mailto:julia@example.com"
+                    detail: "jacqtiemens@gmail.com",
+                    action: "mailto:jacqtiemens@gmail.com"
                   },
                   {
                     icon: Phone,
                     title: "Telefoon", 
-                    detail: "+31 6 12345678",
-                    action: "tel:+31612345678"
+                    detail: "+31 6 43960007",
+                    action: "tel:+31643960007"
                   },
                   {
                     icon: MapPin,
@@ -82,7 +82,7 @@ const Contact = () => {
                   }
                 ].map((contact, index) => (
                   <div key={index} className="flex items-center gap-4 p-4 bg-card rounded-lg shadow-soft hover:shadow-warm transition-all duration-300 group">
-                    <div className="w-12 h-12 bg-gradient-warm rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                    <div className="w-12 h-12 bg-primary rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
                       <contact.icon className="w-5 h-5 text-primary-foreground" />
                     </div>
                     <div className="flex-1">
@@ -104,10 +104,10 @@ const Contact = () => {
 
               {/* CTA */}
               <div className="bg-card p-6 rounded-xl shadow-soft">
-                <h5 className="font-handwritten text-xl text-accent mb-2">
+                <h5 className="font-playful text-xl text-accent mb-2">
                   Bezoek mijn atelier
                 </h5>
-                <p className="text-muted-foreground text-sm mb-4">
+                <p className="text-muted-foreground font-business font-bold text-md mb-4">
                   Maak een afspraak voor een persoonlijke kennismaking
                 </p>
                 <Button variant="outline" size="sm">
@@ -118,14 +118,14 @@ const Contact = () => {
 
             {/* Contact Form */}
             <div className="bg-card rounded-2xl p-8 shadow-warm">
-              <h4 className="text-2xl font-semibold text-foreground mb-6">
+              <h4 className="text-2xl font-business font-bold text-foreground mb-6">
                 Stuur een bericht
               </h4>
               
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <div>
-                    <label htmlFor="name" className="block text-sm font-medium text-foreground mb-2">
+                    <label htmlFor="name" className="block text-sm font-business font-bold text-foreground mb-2">
                       Naam *
                     </label>
                     <input
@@ -135,13 +135,13 @@ const Contact = () => {
                       required
                       value={formData.name}
                       onChange={handleChange}
-                      className="w-full px-4 py-3 bg-background border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary transition-colors"
+                      className="w-full px-4 py-3 bg-background font-business font-bold border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary transition-colors"
                       placeholder="Je naam"
                     />
                   </div>
                   
                   <div>
-                    <label htmlFor="email" className="block text-sm font-medium text-foreground mb-2">
+                    <label htmlFor="email" className="block text-sm font-business font-bold text-foreground mb-2">
                       Email *
                     </label>
                     <input
@@ -151,14 +151,14 @@ const Contact = () => {
                       required
                       value={formData.email}
                       onChange={handleChange}
-                      className="w-full px-4 py-3 bg-background border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary transition-colors"
+                      className="w-full px-4 py-3 bg-background font-business font-bold border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary transition-colors"
                       placeholder="je@email.com"
                     />
                   </div>
                 </div>
 
                 <div>
-                  <label htmlFor="subject" className="block text-sm font-medium text-foreground mb-2">
+                  <label htmlFor="subject" className="block text-sm font-business font-bold text-foreground mb-2">
                     Onderwerp
                   </label>
                   <select
@@ -166,7 +166,7 @@ const Contact = () => {
                     name="subject"
                     value={formData.subject}
                     onChange={handleChange}
-                    className="w-full px-4 py-3 bg-background border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary transition-colors"
+                    className="w-full px-4 py-3 bg-background border font-business font-bold border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary transition-colors"
                   >
                     <option value="">Kies een onderwerp...</option>
                     <option value="Lichtsculptuur informatie">Lichtsculptuur informatie</option>
@@ -178,7 +178,7 @@ const Contact = () => {
                 </div>
 
                 <div>
-                  <label htmlFor="message" className="block text-sm font-medium text-foreground mb-2">
+                  <label htmlFor="message" className="block text-sm font-business font-bold text-foreground mb-2">
                     Bericht *
                   </label>
                   <textarea
@@ -188,7 +188,7 @@ const Contact = () => {
                     value={formData.message}
                     onChange={handleChange}
                     rows={5}
-                    className="w-full px-4 py-3 bg-background border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary transition-colors resize-none"
+                    className="w-full px-4 py-3 bg-background border font-business font-bold border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary transition-colors resize-none"
                     placeholder="Vertel me over je interesse in mijn werk..."
                   />
                 </div>
