@@ -1,8 +1,8 @@
-import { Sparkles, TreePine, Lightbulb, Star } from "lucide-react";
-import { Leaf,  Heart, Recycle } from "lucide-react";
+import linnenTexture from '../assets/images/linnenTexture.jpg';
+import { Lightbulb, Leaf,  Heart, Recycle } from "lucide-react";
 
 const Story = () => {
-  const coreValues = [
+    const coreValues = [
     {
       icon: Leaf,
       title: "Duurzaam",
@@ -29,96 +29,120 @@ const Story = () => {
     },
   ];
 
-   const storySteps = [
-    {
-      icon: TreePine,
-      title: "Van groene joekel tot verdord skelet",
-      text: "Kerst het feest van licht, goud en glitters én van kerstbomen. Bij ons thuis altijd twee stuks, Nordmannen, een kleintje in de voorkamer en een grote joekel in de achterkamer. Bos in huis, dennengeur, het groen, zo fijn, maar ook het trieste vooruitzicht: over een paar weken de bomen afgedankt bij het vuil als verdorde skeletten.",
-    },
-    {
-      icon: Star,
-      title: '"Zullen we eens zonder boom?"',
-      text: "‘Zullen we eens zonder boom?’, probeerde ik. Protest bij man en kinderen. ‘Er zijn alternatieven, zoals een kunstboom.’ ‘Nee mam, hartstikke kitsch en zo’n nepboom is ook niet duurzaam’. Daarmee was ik het met ze eens. ‘Een constructie van steigerhout dan?’ ‘Lelijk, mam’. ‘Of een moderne minimalistische variant?’. ‘Zo’n kaal ding, dan kunnen we beter helemaal niets doen.’ En ook daarin gaf ik ze gelijk. En toch liet het me niet los.",
-    },
-    {
-      icon: Lightbulb,
-      title: "De uitdaging",
-      text: "Ik dacht aan de glinsterende kiezels in mijn jeugd. Er is zoveel schoonheid. Het moet mogelijk zijn om een beter alternatief te bedenken. Ik ga het proberen! Ik zei tegen man en kinderen, ‘ik ga de uitdaging aan. Ik bedenk een feestelijke lichtbron als alternatief voor een boom: eenvoudig, minimaal materiaalgebruik (duurzaam) én met een wow-effect. Het beeld tekende zich in mijn hoofd af, maar de weg ernaartoe was een tocht met hobbels over constructies ontdekkingen over fournituren, lijmen, papiersoorten en stoffen...",
-    },
-    {
-      icon: Sparkles,
-      title: "Uiteindelijk is het gelukt!",
-      text: "Een feestelijke lichtbron, duurzaam en met een wow-effect. Zo simpel kan schoonheid zijn.",
-    },
-  ];
 
   return (
-  <section id="verhaal" className="py-20 bg-gradient-earth relative overflow-hidden"> 
-    <div className="container mx-auto px-6 max-w-6xl">
-       {/* deel 1 */}
-        <div className="text-center max-w-3xl mx-auto">
-          <h1 className="text-3xl lg:text-4xl font-bold text-foreground mb-6">
-            Van groene joekel tot verdord skelet
-          </h1>
-          <p className="text-lg text-muted-foreground leading-relaxed mb-4">
-            Kerst het feest van licht, goud en glitters én van kerstbomen. Bij ons thuis altijd twee stuks, Nordmannen, een kleintje in de voorkamer en een grote joekel in de achterkamer. Bos in huis, dennengeur, het groen, zo fijn, maar ook het trieste vooruitzicht: over een paar weken de bomen afgedankt bij het vuil als verdorde skeletten.
-          </p>
-        </div>
+    <section id="verhaal">
+       <div className="min-h-screen bg-gradient-warm relative">
+      {/* Background texture overlay */}
+      <div 
+        className="absolute inset-0 opacity-20 bg-cover bg-center"
+        style={{ backgroundImage: `url(${linnenTexture})` }}></div>
+    
 
-        {/* deel 2 */}
-          <div className="text-center max-w-3xl mx-auto">
-            <h3 className="text-3xl lg:text-4xl font-bold text-foreground mb-6">
-              "Zullen we eens zonder boom?"
-            </h3>
-            <p className="text-lg text-muted-foreground leading-relaxed mb-4">
-              ‘Zullen we eens zonder boom?’, probeerde ik. Protest bij man en kinderen. ‘Er zijn alternatieven, zoals een kunstboom.’ ‘Nee mam, hartstikke kitsch en zo’n nepboom is ook niet duurzaam’. Daarmee was ik het met ze eens. ‘Een constructie van steigerhout dan?’ ‘Lelijk, mam’. ‘Of een moderne minimalistische variant?’. ‘Zo’n kaal ding, dan kunnen we beter helemaal niets doen.’ En ook daarin gaf ik ze gelijk. En toch liet het me niet los.
+      {/* Main content */}
+      <main className="relative z-10 px-6 py-12">
+        <div className="max-w-4xl mx-auto">
+          {/* Hero section */}
+          <div className="text-center mb-16">
+            <h1 className="text-4xl md:text-5xl story-heading mb-6 leading-tight">
+              Van groene joekel tot verdord skelet
+            </h1>
+            <p className="text-lg story-text max-w-2xl mx-auto">
+              Een verhaal over duurzaamheid, creativiteit en de zoektocht naar een 
+              mooi alternatief voor de traditionele kerstboom
             </p>
           </div>
 
-          {/* deel 3 */}
-        <div className="text-center max-w-3xl mx-auto">
-          <h3 className="text-3xl lg:text-4xl font-bold text-foreground mb-6">
-            De uitdaging
-          </h3>
-          <p className="text-lg text-muted-foreground leading-relaxed mb-6">
-            Ik dacht aan de glinsterende kiezels in mijn jeugd. Er is zoveel schoonheid. Het moet mogelijk zijn om een beter alternatief te bedenken. Ik ga het proberen! Ik zei tegen man en kinderen, ‘ik ga de uitdaging aan. Ik bedenk een feestelijke lichtbron als alternatief voor een boom: eenvoudig, minimaal materiaalgebruik (duurzaam) én met een wow-effect. Het beeld tekende zich in mijn hoofd af, maar de weg ernaartoe was een tocht met hobbels over constructies ontdekkingen over fournituren, lijmen, papiersoorten en stoffen...
-          </p>
-        </div>
-
-        {/* deel 4 */}
-          <div className="text-center max-w-3xl mx-auto">
-              <h3 className="text-3xl lg:text-4xl font-bold text-foreground mb-6">
-                Uiteindelijk is het gelukt!
-              </h3>
-              <p className="text-muted-foreground text-lg">
-                Een feestelijke lichtbron, duurzaam en met een wow-effect. Zo simpel kan schoonheid zijn.
-              </p>
-            </div>
-       
-
-        {/* waarden */}
-        <div className="grid lg:grid-cols-2 gap-8 mb-24 my-10">
-          {coreValues.map((value, index) => (
-            <div
-              key={index}
-              className="flex items-start gap-5 p-6 bg-card rounded-2xl shadow-soft hover:shadow-warm transition-all duration-300 group"
-            >
-              <div className="flex-shrink-0 w-14 h-14 bg-primary rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                <value.icon className="w-6 h-6 text-primary-foreground" />
-              </div>
+          {/* Story content */}
+          <div className="bg-card/80 backdrop-blur-sm rounded-2xl p-8 md:p-12 shadow-warm">
+            <div className="space-y-8 story-text text-lg leading-relaxed">
               <div>
-                <h4 className="text-xl font-semibold text-foreground mb-1">
-                  {value.title}
-                </h4>
-                <p className="text-muted-foreground leading-relaxed">
-                  {value.description}
+                <p>
+                  Kerst het feest van licht, goud en glitters én van kerstbomen. Bij ons thuis altijd twee stuks, 
+                  Nordmannen, een kleintje in de voorkamer en een grote joekel in de achterkamer. Bos in huis, 
+                  dennengeur, het groen, zo fijn, maar ook het trieste vooruitzicht: over een paar weken de bomen 
+                  afgedankt bij het vuil als verdorde skeletten.
+                </p>
+              </div>
+
+              <div className="border-l-4 border-accent pl-6">
+                <h2 className="story-quote text-xl mb-4">"Zullen we eens zonder boom?"</h2>
+                <p>
+                  'Zullen we eens zonder boom?', probeerde ik. Protest bij man en kinderen. 'Er zijn alternatieven, 
+                  zoals een kunstboom.' 'Nee mam, hartstikke kitsch en zo'n nepboom is ook niet duurzaam'. Daarmee 
+                  was ik het met ze eens. 'Een constructie van steigerhout dan?' 'Lelijk, mam'. 'Of een moderne 
+                  minimalistische variant?'. 'Zo'n kaal ding, dan kunnen we beter helemaal niets doen.' En ook 
+                  daarin gaf ik ze gelijk. En toch liet het me niet los.
+                </p>
+              </div>
+
+              <div>
+                <h2 className="story-heading text-2xl mb-4">De uitdaging</h2>
+                <p>
+                  Ik dacht aan de glinsterende kiezels in mijn jeugd. Er is zoveel schoonheid. Het moet mogelijk 
+                  zijn om een beter alternatief te bedenken. Ik ga het proberen! Ik zei tegen man en kinderen, 
+                  'ik ga de uitdaging aan. Ik bedenk een feestelijke lichtbron als alternatief voor een boom: 
+                  eenvoudig, minimaal materiaalgebruik (duurzaam) én met een wow-effect. Het beeld tekende zich 
+                  in mijn hoofd af, maar de weg ernaartoe was een tocht met hobbels over constructies ontdekkingen 
+                  over fournituren, lijmen, papiersoorten en stoffen...
+                </p>
+              </div>
+
+              <div className="bg-secondary/50 rounded-xl p-6">
+                <h2 className="story-heading text-2xl mb-4">Uiteindelijk is het gelukt!</h2>
+                <p>
+                  Een feestelijke lichtbron, duurzaam en met een wow-effect. Zo simpel kan schoonheid zijn.
                 </p>
               </div>
             </div>
-          ))}
-        </div>  
-      </div>
-    </section>
+
+            {/* Call to action */}
+            <div className="mt-12 text-center">
+              <div className="inline-flex space-x-4">
+                <a 
+                  href="#" 
+                  className="px-6 py-3 bg-accent text-accent-foreground rounded-lg hover:opacity-90 transition-opacity shadow-soft"
+                >
+                  Bekijk de lichtsculpturen
+                </a>
+                <a 
+                  href="#" 
+                  className="px-6 py-3 border border-primary text-primary rounded-lg hover:bg-primary hover:text-primary-foreground transition-colors"
+                >
+                  Leer meer over mij
+                </a>
+              </div>
+            </div>
+          </div>
+
+          
+          {/* waarden */}
+          <div className="grid lg:grid-cols-2 gap-8 mb-24 my-10">
+            {coreValues.map((value, index) => (
+              <div
+                key={index}
+                className="flex items-start gap-5 p-6 bg-card rounded-2xl shadow-soft hover:shadow-warm transition-all duration-300 group"
+              >
+                <div className="flex-shrink-0 w-14 h-14 bg-primary rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                  <value.icon className="w-6 h-6 text-primary-foreground" />
+                </div>
+                <div>
+                  <h4 className="text-xl font-semibold text-foreground mb-1">
+                    {value.title}
+                  </h4>
+                  <p className="text-muted-foreground leading-relaxed">
+                    {value.description}
+                  </p>
+                </div>
+              </div>
+            ))}
+          </div> 
+
+        </div>
+      </main>
+    </div>
+  </section>
+   
   );
 };
 
