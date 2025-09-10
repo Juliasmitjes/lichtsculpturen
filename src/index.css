@@ -34,6 +34,8 @@
     --accent-warm: 10 70% 38%;       /* Diep, rijk kastanjebruin voor hover/actief */
     --accent-light: 25 50% 70%;      /* Zachtere warme oranje-beige voor highlights */
 
+    
+
 
     /* Diep dennegroen highlight */
     --highlight: 120 35% 32%;        /* Warmer donkergroen */
@@ -56,6 +58,9 @@
     --gradient-warm: linear-gradient(135deg, hsl(var(--primary)) 0%, hsl(var(--accent)) 50%, hsl(var(--secondary)) 100%);
     --gradient-earth: linear-gradient(180deg, hsl(var(--background)) 0%, hsl(var(--muted)) 100%);
     --gradient-sunset: linear-gradient(45deg, hsl(var(--primary)) 50%, hsl(var(--highlight)) 100%);
+
+    --gradient-white: linear-gradient(135deg, hsl(35, 45%, 94%), hsl(35, 35%, 85%));
+    --gradient-accent: linear-gradient(135deg, hsl(16, 75%, 58%), hsl(25, 65%, 45%));
     
     /* Schaduwen met natuurlijke kleuren */
     --shadow-soft: 0 4px 20px hsl(var(--primary) / 0.1);

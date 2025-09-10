@@ -32,30 +32,19 @@ const Story = () => {
 
   return (
     <section id="verhaal">
-       <div className="min-h-screen bg-gradient-warm relative">
-      {/* Background texture overlay */}
+       <div className="min-h-screen bg-gradient-white relative">
+      {/* achtergrondafbeelding */}
       <div 
         className="absolute inset-0 opacity-20 bg-cover bg-center"
-        style={{ backgroundImage: `url(${linnenTexture})` }}></div>
+        style={{ backgroundImage: `url(${linnenTexture})`, opacity:0.8 }}></div>
     
 
-      {/* Main content */}
+      {/* content */}
       <main className="relative z-10 px-6 py-12">
         <div className="max-w-4xl mx-auto">
-          {/* Hero section */}
-          <div className="text-center mb-16">
-            <h1 className="text-4xl md:text-5xl story-heading mb-6 leading-tight">
-              Van groene joekel tot verdord skelet
-            </h1>
-            <p className="text-lg story-text max-w-2xl mx-auto">
-              Een verhaal over duurzaamheid, creativiteit en de zoektocht naar een 
-              mooi alternatief voor de traditionele kerstboom
-            </p>
-          </div>
-
-          {/* Story content */}
           <div className="bg-card/80 backdrop-blur-sm rounded-2xl p-8 md:p-12 shadow-warm">
-            <div className="space-y-8 story-text text-lg leading-relaxed">
+            <div className="space-y-8 text-lg font-business font-bold  leading-relaxed">
+              <h2 className="text-2xl mb-4">Van groene joekel tot verdord skelet</h2>
               <div>
                 <p>
                   Kerst het feest van licht, goud en glitters én van kerstbomen. Bij ons thuis altijd twee stuks, 
@@ -96,7 +85,7 @@ const Story = () => {
               </div>
             </div>
 
-            {/* Call to action */}
+            {/* CTA */}
             <div className="mt-12 text-center">
               <div className="inline-flex space-x-4">
                 <a 
