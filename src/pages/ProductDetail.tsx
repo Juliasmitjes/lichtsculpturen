@@ -24,12 +24,14 @@ const ProductDetail = () => {
   }
 
   const product = getProductById(id);
+
+  const [isZoomed, setIsZoomed] = useState(false);
   
   if (!product) {
     return (
       <div className="min-h-screen bg-background flex items-center justify-center">
         <div className="text-center">
-          <h1 className="text-2xl font-bold mb-4">Product niet gevonden</h1>
+          <h1 className="text-2xl font-business font-bold mb-4">Product niet gevonden</h1>
           <Button onClick={() => navigate('/')} variant="default">
             Terug naar overzicht
           </Button>
@@ -38,52 +40,62 @@ const ProductDetail = () => {
     );
   }
 
-  // const handleAddToCart = () => {
-  //   toast({
-  //     title: "Toegevoegd aan winkelwagen",
-  //     description: `${product.name} (${quantity}x) is toegevoegd aan je winkelwagen.`,
-  //   });
-  // };
-
   const seasonColors = {
-    spring: 'bg-green-100 text-green-800',
-    summer: 'bg-yellow-100 text-yellow-800', 
-    autumn: 'bg-orange-100 text-orange-800',
+    lente: 'bg-green-100 text-green-800',
+    zomer: 'bg-yellow-100 text-yellow-800', 
+    herfst: 'bg-orange-100 text-orange-800',
     winter: 'bg-blue-100 text-blue-800',
-    'all-seasons': 'bg-purple-100 text-purple-800'
+    'alle-seizoenen': 'bg-purple-100 text-purple-800'
   };
 
   const seasonIcons = {
-    spring: '🌸',
-    summer: '☀️',
-    autumn: '🍂', 
+    lente: '🌸',
+    zomer: '☀️',
+    herfst: '🍂', 
     winter: '❄️',
-    'all-seasons': '🔄'
+    'alle-seizoenen': '🔄'
   };
 
   return (
     <div className="min-h-screen bg-background">
       <div className="container mx-auto px-4 py-8">
-        {/* Back button */}
+
+        {/* terug naar hoofdmenu knop */}
         <Button
-          variant="ghost"
+          variant="secondary"
           onClick={() => navigate('/')}
-          className="mb-6 hover:bg-warm-sand"
+          className="mb-6 hover:bg-secondary/50"
         >
           <ArrowLeft className="w-4 h-4 mr-2" />
           Terug naar overzicht
         </Button>
 
         <div className="grid lg:grid-cols-2 gap-12">
-          {/* Image Gallery */}
-          <div className="space-y-4">
-            <div className="aspect-[4/3] rounded-2xl overflow-hidden bg-warm-sand shadow-lg">
+
+          {/* afbeeldingen */}
+          <div>
+            <div className="aspect-[4/3] rounded-2xl overflow-hidden bg-warm-sand shadow-lg cursor-pointer"
+            onClick={() => setIsZoomed(true)}>
               <img
                 src={product.images[selectedImageIndex]}
                 alt={product.title}
                 className="w-full h-full object-cover"
               />
             </div>
+
+            {isZoomed && (
+              <div
+                className="fixed inset-0 bg-black bg-opacity-80 flex items-center justify-center z-50"
+                onClick={() => setIsZoomed(false)}
+              >
+                <img
+                  src={product.images[selectedImageIndex]}
+                  alt={product.title}
+                  className="max-w-4xl max-h-[90vh] rounded-xl shadow-lg"
+                />
+              </div>
+            )}
+
             
             {product.images.length > 1 && (
               <div className="flex gap-3">
@@ -93,7 +105,7 @@ const ProductDetail = () => {
                     onClick={() => setSelectedImageIndex(index)}
                     className={`w-20 h-20 rounded-lg overflow-hidden transition-all ${
                       selectedImageIndex === index 
-                        ? 'ring-2 ring-terracotta shadow-lg' 
+                        ? 'ring-2 ring-primary shadow-lg' 
                         : 'opacity-70 hover:opacity-100'
                     }`}
                   >
@@ -116,7 +128,7 @@ const ProductDetail = () => {
                   <Badge 
                     className={`mb-3 ${seasonColors[product.season]}`}
                   >
-                    {seasonIcons[product.season]} {product.season === 'all-seasons' ? 'Alle seizoenen' : product.season}
+                    {seasonIcons[product.season]} {product.season === 'alle-seizoenen' ? 'Alle seizoenen' : product.season}
                   </Badge>
                   <h1 className="text-3xl font-bold text-foreground mb-2">{product.title}</h1>
                   <p className="text-lg text-muted-foreground">{product.description}</p>

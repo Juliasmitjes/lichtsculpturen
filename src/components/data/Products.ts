@@ -15,7 +15,7 @@ export const products: Product[] = [
     price: 295,
     images: [boom1Img, boom2Img],
     materials: ['Berkenhouten stokken', 'Warm LED-lichtsnoer', 'IJzeren ringen'],
-    season: 'autumn',
+    season: 'herfst',
     dimensions: {
       height: '180 cm',
       width: '120 cm', 
@@ -39,7 +39,7 @@ export const products: Product[] = [
     price: 275,
     images: [boom2Img, boom1Img],
     materials: ['Beukenhout', 'Warm wit LED-snoer', 'Natuurlijk linnen', 'RVS bevestigingen'],
-    season: 'all-seasons',
+    season: 'alle-seizoenen',
     dimensions: {
       height: '160 cm',
       width: '100 cm',
@@ -63,7 +63,7 @@ export const products: Product[] = [
     price: 150,
     images: [schilderij1Img],
     materials: ['Olieverf op doek', 'Licht', 'Linnen'],
-    season: 'all-seasons',
+    season: 'zomer',
     dimensions: {
       height: '40 cm',
       width: '40 cm',
@@ -85,7 +85,7 @@ export const products: Product[] = [
     price: 275,
     images: [boom3Img],
     materials: ['Hout', 'Natuurlijke vezels'],
-    season: 'all-seasons',
+    season: 'alle-seizoenen',
     dimensions: {
       height: '160 cm',
       width: '100 cm',
@@ -109,7 +109,7 @@ export const products: Product[] = [
     price: 275,
     images: [schilderij2Img],
     materials: [ 'Aquarel op papier'],
-    season: 'all-seasons',
+    season: 'lente',
     dimensions: {
       height: '160 cm',
       width: '100 cm',
@@ -133,7 +133,7 @@ export const products: Product[] = [
     price: 275,
     images: [boom4Img],
     materials: ['Biologisch linnen', 'Gevilte wol', 'Denneappels'],
-    season: 'all-seasons',
+    season: 'winter',
     dimensions: {
       height: '160 cm',
       width: '100 cm',

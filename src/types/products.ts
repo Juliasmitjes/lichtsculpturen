@@ -6,7 +6,7 @@ export interface Product {
   price: number;
   images: string[];
   materials: string[];
-  season: 'spring' | 'summer' | 'autumn' | 'winter' | 'all-seasons';
+  season: 'lente' | 'zomer' | 'herfst' | 'winter' | 'alle-seizoenen';
   dimensions: {
     height: string;
     width: string;
