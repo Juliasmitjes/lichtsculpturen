@@ -1,5 +1,5 @@
 import { useParams, useNavigate } from 'react-router-dom';
-import { useState } from 'react';
+import { useState, useEffect  } from 'react';
 import { ArrowLeft, Heart, ShoppingCart, Star, Package, Leaf, Clock, Award } from 'lucide-react';
 import { Button } from '../components/ui/button';
 import { Card, CardContent } from '../components/ui/card';
@@ -10,6 +10,10 @@ import { getProductById } from '../components/data/Products';
 const ProductDetail = () => {
   const { id } = useParams<{ id: string }>();
   const navigate = useNavigate();
+  useEffect(() => {
+  window.scrollTo(0, 0);
+  }, []);
+
   // const { toast } = useToast();
   const [selectedImageIndex, setSelectedImageIndex] = useState(0);
   const [quantity, setQuantity] = useState(1);
