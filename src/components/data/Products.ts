@@ -4,8 +4,8 @@ import boom2Img from "../../assets/images/boom2.jpeg";
 
 export const products: Product[] = [
   {
-    id: '1',
-    name: 'Najaarslicht',
+    id: 1,
+    name: 'Najaarsliggie',
     description: 'Organische vormen in warme aardtinten',
     longDescription: 'Deze prachtige lichtsculptuur brengt de warmte van de herfst in huis. Gemaakt met zorgvuldig geselecteerde materialen die de natuurlijke schoonheid van het seizoen weerspiegelen. De warme LED-verlichting creëert een intieme sfeer die perfect past bij koude herfstavonden.',
     price: 295,
@@ -28,7 +28,7 @@ export const products: Product[] = [
     category: 'lichtsculptuur'
   },
   {
-    id: '2',
+    id: 2,
     name: 'Licht in stijl',
     description: 'Minimalistische elegantie voor moderne interieurs',
     longDescription: 'Een tijdloze lichtsculptuur die zich perfect aanpast aan elk modern interieur. De cleane lijnen en neutrale tinten maken deze sculptuur een elegante toevoeging aan elke ruimte. Het zachte licht creëert een serene atmosfeer.',

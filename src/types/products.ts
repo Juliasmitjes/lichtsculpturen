@@ -1,6 +1,6 @@
 export interface Product {
-  id: string;
-  name: string;
+  id: number;
+  title: string;
   description: string;
   longDescription: string;
   price: number;
@@ -14,5 +14,5 @@ export interface Product {
   };
   features: string[];
   inStock: boolean;
-  category: 'lichtsculptuur' | 'schilderij';
+  category: 'sculpturen' | 'schilderijen';
 }
