@@ -52,7 +52,7 @@ const Contact = () => {
                 <h4 className="text-2xl font-semibold text-foreground mb-6">
                   Kom langs in mijn atelier
                 </h4>
-                <p className="text-muted-foreground text-lg font-business font-bold mb-8">
+                <p className="text-muted-foreground text-md font-business font-bold mb-8">
                   In mijn atelier kun je mijn werk van dichtbij bekijken. 
                   Maak een afspraak en ontdek mijn lichtsculpturen en schilderijen.
                 </p>
