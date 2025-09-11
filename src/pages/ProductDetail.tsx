@@ -165,9 +165,39 @@ const ProductDetail = () => {
               </div>
             </div>
 
+            {/* CTA */}
+            <Card className="border-2 border-primary/50 bg-primary/20">
+              <CardContent className="p-6">
+                <div className="flex items-center mb-4">
+                  <Clock className="w-5 h-5 mr-2 text-green-600" />
+                  <span className="text-green-600 font-business font-bold">Op voorraad - Handgemaakt op bestelling</span>
+                </div>
+                
+                <div className="flex items-center gap-4 mb-6">
+                  <label htmlFor="quantity" className="font-business font-bold">Aantal:</label>
+                  <select
+                    id="quantity"
+                    value={quantity}
+                    onChange={(e) => setQuantity(Number(e.target.value))}
+                    className="border border-border rounded-md px-3 py-2 bg-background font-business font-bold"
+                  >
+                    {[1, 2, 3].map(num => (
+                      <option key={num} value={num}>{num}</option>
+                    ))}
+                  </select>
+                  <Button variant="default" size="lg">
+                    Vrijblijvend aanvragen
+                  </Button>
+                </div>
+                <p className="text-xs text-muted-foreground mt-4 text-center">
+                  Gratis verzending binnen Nederland • 30 dagen bedenktijd
+                </p>
+              </CardContent>
+            </Card>
+
             {/* eigenschappen */}
             <Card>
-              <CardContent className="p-6 bg-secondary-light border-secondary-warm/20">
+              <CardContent className="p-6 border border-border rounded-md bg-secondary-light border-secondary">
                 <h3 className="font-bold font-business mb-4 flex items-center">
                   <Award className="w-5 h-5 mr-2 text-primary" />
                   Eigenschappen
@@ -185,7 +215,7 @@ const ProductDetail = () => {
 
             {/* materialen */}
             <Card>
-              <CardContent className="p-6 bg-secondary/50 border-secondary-warm/50">
+              <CardContent className="p-6 border border-border rounded-md bg-secondary/50 border-secondary-warm/50">
                 <h3 className="font-bold font-business mb-4 flex items-center">
                   <Leaf className="w-5 h-5 mr-2 text-primary" />
                   Natuurlijke materialen
@@ -202,7 +232,7 @@ const ProductDetail = () => {
 
             {/* afmetingen */}
             <Card>
-              <CardContent className="p-6 bg-secondary/20 border-secondary-warm/20">
+              <CardContent className="p-6 border border-border rounded-md bg-secondary/20 border-secondary-warm/20">
                 <h3 className="font-business font-bold mb-4 flex items-center">
                   <Package className="w-5 h-5 mr-2 text-primary" />
                   Afmetingen
@@ -224,41 +254,13 @@ const ProductDetail = () => {
               </CardContent>
             </Card>
 
-            {/* CTA */}
-            <Card className="border-2 border-primary/20 bg-primary/5">
-              <CardContent className="p-6">
-                <div className="flex items-center mb-4">
-                  <Clock className="w-5 h-5 mr-2 text-green-600" />
-                  <span className="text-green-600 font-business font-bold">Op voorraad - Handgemaakt op bestelling</span>
-                </div>
-                
-                <div className="flex items-center gap-4 mb-6">
-                  <label htmlFor="quantity" className="font-business font-bold">Aantal:</label>
-                  <select
-                    id="quantity"
-                    value={quantity}
-                    onChange={(e) => setQuantity(Number(e.target.value))}
-                    className="border border-border rounded-md px-3 py-2 bg-background font-business font-bold"
-                  >
-                    {[1, 2, 3].map(num => (
-                      <option key={num} value={num}>{num}</option>
-                    ))}
-                  </select>
-                  <Button variant="default" size="lg">
-                    Bestellen
-                  </Button>
-                </div>
-                <p className="text-xs text-muted-foreground mt-4 text-center">
-                  Gratis verzending binnen Nederland • 30 dagen bedenktijd
-                </p>
-              </CardContent>
-            </Card>
+           
 
-            {/* Description */}
+            {/* beschrijving */}
             <Card>
-              <CardContent className="p-6">
-                <h3 className="font-semibold mb-4">Over dit kunstwerk</h3>
-                <p className="text-muted-foreground leading-relaxed">
+              <CardContent className="p-6 border border-border rounded-md">
+                <h3 className="font-bold font-business mb-4">Over dit kunstwerk</h3>
+                <p className="text-muted-foreground font-bold font-business leading-relaxed">
                   {product.longDescription}
                 </p>
               </CardContent>
