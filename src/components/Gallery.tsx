@@ -1,87 +1,13 @@
 import { useState } from "react";
 import { Button } from "./ui/button";
 import { ExternalLink, Heart } from "lucide-react";
-import { Link, useParams }  from "react-router-dom";
+import { Link }  from "react-router-dom";
 import { products } from '../components/data/Products';
 
-// import boom1Img from "../assets/images/boom1.jpg";
-// import boom2Img from "../assets/images/boom2.jpeg";
-// import schilderij1Img from "../assets/images/schilderij1.jpg";
-// import boom3Img from "../assets/images/boom3.jpg";
-// import schilderij2Img from "../assets/images/schilderij2.jpg";
-// import boom4Img from "../assets/images/boom4.jpeg";
-
-// interface ArtworkItem {
-//   id: number;
-//   title: string;
-//   category: "sculpturen" | "schilderijen";
-//   image: string;
-//   description: string;
-//   materials?: string;
-// }
-
-// const artworks: ArtworkItem[] = [
-//   {
-//     id: 1,
-//     title: "Najaarslicht",
-//     category: "sculpturen",
-//     image: boom1Img,
-//     description: "Organische vormen in warme aardtinten",
-//     materials: "Hout, warme kleuren, denneappels"
-//   },
-//   {
-//     id: 2,
-//     title: "Licht in stijl", 
-//     category: "sculpturen",
-//     image: boom2Img,
-//     description: "Een elegante sculptuur van klassieke vorm",
-//     materials: "Goud en linnen"
-//   },
-//   {
-//     id: 3,
-//     title: "Landschap",
-//     category: "schilderijen", 
-//     image: schilderij1Img,
-//     description: "Koele tinten die een Scandinavisch landschap oproepen",
-//     materials: "Olieverf op doek"
-//   },
-//   {
-//     id: 4,
-//     title: "Bubbellicht",
-//     category: "sculpturen",
-//     image: boom3Img,
-//     description: "Warme oranje en bruine tinten met zachte gloed",
-//     materials: "Hout en natuurlijke vezels"
-//   },  
-//   {
-//     id: 5,
-//     title: "Boslandschap", 
-//     category: "schilderijen",
-//     image: schilderij2Img,
-//     description: "Warme gele en rode tinten die een warme dag in het bos uitbeelden",
-//     materials: "Aquarel op papier"
-//   },
-//   {
-//     id: 6,
-//     title: "Lentelicht",  
-//     category: "sculpturen",
-//     image: boom4Img,
-//     description: "Feestelijke, vrolijke sculptuur met een frisse uitstraling",
-//     materials: "Metaal, licht, linnen"
-//   }
-// ];
 
 const Gallery = () => {
   const [activeCategory, setActiveCategory] = useState<"alle" | "sculpturen" | "schilderijen">("alle");
   const [hoveredItem, setHoveredItem] = useState<number | null>(null);
-
-  // const filteredProducts = activeCategory === "alle"
-  //   ? products
-  //   : products.filter(product =>
-  //       activeCategory === "sculpturen"
-  //         ? product.category === "lichtsculptuur"
-  //         : product.category === "schilderij"
-  //     );
 
   const filteredProducts = activeCategory === "alle" 
     ? products 
@@ -146,7 +72,7 @@ const Gallery = () => {
               onMouseLeave={() => setHoveredItem(null)}
             >
               {/* afbeeldingen */}
-              <Link to={`/details/${product.id}`} className="relative overflow-hidden aspect-[4/5] block group">
+              <Link to={`/product/${product.id}`} className="relative overflow-hidden aspect-[4/5] block group">
                 <img
                   src={product.images[0]}
                   alt={product.title}
@@ -187,7 +113,7 @@ const Gallery = () => {
                 )}
 
                 <Button asChild variant="default" size="sm" className="w-full">
-                  <Link to={`/details/${product.id}`}>
+                  <Link to={`/product/${product.id}`}>
                     Meer informatie
                     <ExternalLink className="w-4 h-4" />
                   </Link>

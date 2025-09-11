@@ -76,7 +76,7 @@ const ProductDetail = () => {
             <div className="aspect-[4/3] rounded-2xl overflow-hidden bg-warm-sand shadow-lg">
               <img
                 src={product.images[selectedImageIndex]}
-                alt={product.name}
+                alt={product.title}
                 className="w-full h-full object-cover"
               />
             </div>
@@ -95,7 +95,7 @@ const ProductDetail = () => {
                   >
                     <img
                       src={image}
-                      alt={`${product.name} ${index + 1}`}
+                      alt={`${product.title} ${index + 1}`}
                       className="w-full h-full object-cover"
                     />
                   </button>
@@ -114,7 +114,7 @@ const ProductDetail = () => {
                   >
                     {seasonIcons[product.season]} {product.season === 'all-seasons' ? 'Alle seizoenen' : product.season}
                   </Badge>
-                  <h1 className="text-3xl font-bold text-foreground mb-2">{product.name}</h1>
+                  <h1 className="text-3xl font-bold text-foreground mb-2">{product.title}</h1>
                   <p className="text-lg text-muted-foreground">{product.description}</p>
                 </div>
                 <Button variant="ghost" size="icon" className="text-muted-foreground hover:text-terracotta">
