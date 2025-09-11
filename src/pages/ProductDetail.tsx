@@ -1,11 +1,13 @@
 import { useParams, useNavigate } from 'react-router-dom';
 import { useState, useEffect  } from 'react';
 import { ArrowLeft, Heart, ShoppingCart, Star, Package, Leaf, Clock, Award } from 'lucide-react';
+import { IoIosClose } from "react-icons/io";
 import { Button } from '../components/ui/button';
 import { Card, CardContent } from '../components/ui/card';
 import { Badge } from '../components/ui/badge';
 import { getProductById } from '../components/data/Products';
-import { PanZoom } from 'react-easy-panzoom'
+import { TransformWrapper, TransformComponent } from "react-zoom-pan-pinch";
+
 // import { useToast } from '@/hooks/use-toast';
 
 const ProductDetail = () => {
@@ -27,11 +29,8 @@ const ProductDetail = () => {
   const product = getProductById(id);
 
   const [isZoomed, setIsZoomed] = useState(false);
-  const [zoom, setZoom] = useState(1);
 
-
-
-  
+ 
   if (!product) {
     return (
       <div className="min-h-screen bg-background flex items-center justify-center">
@@ -82,7 +81,6 @@ const ProductDetail = () => {
             <div className="aspect-[4/3] rounded-2xl overflow-hidden bg-warm-sand shadow-lg cursor-pointer"
            onClick={() => {
               setIsZoomed(true);
-              setZoom(1); 
             }}>
               <img
                 src={product.images[selectedImageIndex]}
@@ -91,33 +89,28 @@ const ProductDetail = () => {
               />
             </div>
 
-            {isZoomed && (
-                <div
-                  className="fixed inset-0 bg-black bg-opacity-80 flex items-center justify-center z-50"
-                  onClick={() => {
-                    setIsZoomed(false);
-                    setZoom(1);}}>
-                  <PanZoom
-                    zoom={zoom}
-                    onZoomChange={(newZoom) => setZoom(newZoom)}
-                    autoCenter
-                    minZoom={1}
-                    maxZoom={2.4}
-                    enablePan={zoom > 1}
-                    className="max-w-4xl max-h-[90vh] rounded-xl shadow-lg">
-                    <img
-                      src={product.images[selectedImageIndex]}
-                      alt={product.title}
-                      draggable={false}
-                      className="max-w-full max-h-[90vh] object-contain cursor-zoom-in"
-                      onClick={(e) => {
-                        e.stopPropagation(); 
-                        setZoom((prev) => (prev === 1 ? 2.0 : 1)); }}/>
-                  </PanZoom>
+                {isZoomed && (
+                <div className="fixed inset-0 bg-black bg-opacity-80 flex items-center justify-center z-50">
+                  <IoIosClose
+                    onClick={() => setIsZoomed(false)}
+                    className="absolute top-10 right-10 w-10 h-10 text-white bg-black/50 hover:bg-black/70 rounded-full p-2 z-50 cursor-pointer"
+                  />
+
+                  <div className="w-full h-full flex items-center justify-center">
+                    <TransformWrapper>
+                    <TransformComponent>
+                      <img
+                        src={product.images[selectedImageIndex]}
+                        alt={product.title}
+                        className="max-w-full max-h-[90vh] object-contain cursor-zoom-in"
+                        style={{ transformOrigin: "center center" }}
+                      />
+                  </TransformComponent>
+                  </TransformWrapper>
+                  </div>
                 </div>
               )}
-
-            
+                          
             {product.images.length > 1 && (
               <div className="flex gap-3">
                 {product.images.map((image, index) => (
@@ -166,7 +159,7 @@ const ProductDetail = () => {
             </div>
 
             {/* CTA */}
-            <Card className="border-2 border-primary/50 bg-primary/20">
+            <Card className="border-2 border-primary/10 bg-primary/20">
               <CardContent className="p-6">
                 <div className="flex items-center mb-4">
                   <Clock className="w-5 h-5 mr-2 text-green-600" />
@@ -197,7 +190,7 @@ const ProductDetail = () => {
 
             {/* eigenschappen */}
             <Card>
-              <CardContent className="p-6 border border-border rounded-md bg-secondary-light border-secondary">
+              <CardContent className="p-6 border-2 rounded-md bg-secondary-light border-secondary/10">
                 <h3 className="font-bold font-business mb-4 flex items-center">
                   <Award className="w-5 h-5 mr-2 text-primary" />
                   Eigenschappen
@@ -215,7 +208,7 @@ const ProductDetail = () => {
 
             {/* materialen */}
             <Card>
-              <CardContent className="p-6 border border-border rounded-md bg-secondary/50 border-secondary-warm/50">
+              <CardContent className="p-6 border border-border rounded-md bg-secondary/50 border-secondary-warm/20">
                 <h3 className="font-bold font-business mb-4 flex items-center">
                   <Leaf className="w-5 h-5 mr-2 text-primary" />
                   Natuurlijke materialen
@@ -232,7 +225,7 @@ const ProductDetail = () => {
 
             {/* afmetingen */}
             <Card>
-              <CardContent className="p-6 border border-border rounded-md bg-secondary/20 border-secondary-warm/20">
+              <CardContent className="p-6 border border-border rounded-md bg-secondary/20 border-secondary-warm/10">
                 <h3 className="font-business font-bold mb-4 flex items-center">
                   <Package className="w-5 h-5 mr-2 text-primary" />
                   Afmetingen
@@ -258,7 +251,7 @@ const ProductDetail = () => {
 
             {/* beschrijving */}
             <Card>
-              <CardContent className="p-6 border border-border rounded-md">
+              <CardContent className="p-6 border-2 border-white/20 rounded-md">
                 <h3 className="font-bold font-business mb-4">Over dit kunstwerk</h3>
                 <p className="text-muted-foreground font-bold font-business leading-relaxed">
                   {product.longDescription}
