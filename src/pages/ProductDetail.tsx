@@ -1,7 +1,6 @@
 import { useParams, useNavigate } from 'react-router-dom';
 import { useState, useEffect  } from 'react';
-import { ArrowLeft, Heart, ShoppingCart, Star, Package, Leaf, Clock, Award } from 'lucide-react';
-import { IoIosClose } from "react-icons/io";
+import { ArrowLeft, Heart, ShoppingCart, Star, Package, Leaf, Clock, Award, X } from 'lucide-react';
 import { Button } from '../components/ui/button';
 import { Card, CardContent } from '../components/ui/card';
 import { Badge } from '../components/ui/badge';
@@ -91,7 +90,7 @@ const ProductDetail = () => {
 
                 {isZoomed && (
                 <div className="fixed inset-0 bg-black bg-opacity-80 flex items-center justify-center z-50">
-                  <IoIosClose
+                  <X
                     onClick={() => setIsZoomed(false)}
                     className="absolute top-10 right-10 w-10 h-10 text-white bg-black/50 hover:bg-black/70 rounded-full p-2 z-50 cursor-pointer"
                   />
