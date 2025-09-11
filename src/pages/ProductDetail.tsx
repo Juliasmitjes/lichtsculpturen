@@ -11,9 +11,9 @@ import { PanZoom } from 'react-easy-panzoom'
 const ProductDetail = () => {
   const { id } = useParams<{ id: string }>();
   const navigate = useNavigate();
-  // useEffect(() => {
-  // window.scrollTo(0, 0);
-  // }, []);
+  useEffect(() => {
+  window.scrollTo(0, 0);
+  }, []);
 
   // const { toast } = useToast();
   const [selectedImageIndex, setSelectedImageIndex] = useState(0);
@@ -155,9 +155,9 @@ const ProductDetail = () => {
                   <h1 className="text-3xl font-bold text-foreground mb-2">{product.title}</h1>
                   <p className="text-lg font-bold font-business text-muted-foreground">{product.description}</p>
                 </div>
-                <Button variant="ghost" size="icon" className="text-muted-foreground hover:text-secondary">
+                {/* <Button variant="ghost" size="icon" className="text-muted-foreground hover:text-secondary">
                   <Heart className="w-5 h-5" />
-                </Button>
+                </Button> */}
               </div>
               
               <div className="text-3xl font-bold mb-6 text-primary">
