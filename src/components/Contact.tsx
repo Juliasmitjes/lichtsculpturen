@@ -12,8 +12,8 @@ const Contact = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // Handle form submission here
-    const mailtoLink = `mailto:julia@example.com?subject=${encodeURIComponent(formData.subject)}&body=${encodeURIComponent(
+
+    const mailtoLink = `mailto:jacqtiemens@gmail.com?subject=${encodeURIComponent(formData.subject)}&body=${encodeURIComponent(
       `Naam: ${formData.name}\nEmail: ${formData.email}\n\nBericht:\n${formData.message}`
     )}`;
     window.location.href = mailtoLink;
@@ -40,8 +40,7 @@ const Contact = () => {
               Neem contact op
             </h3>
             <p className="text-lg text-muted-foreground font-business font-bold max-w-2xl mx-auto">
-              Nieuwsgierig naar mijn werk? Wil je meer weten over een specifieke sculptuur 
-              of schilderij? 
+              Nieuwsgierig naar mijn werk? Of wil je een opdracht bespreken?
             </p>
           </div>
 
@@ -53,13 +52,13 @@ const Contact = () => {
                 <h4 className="text-2xl font-semibold text-foreground mb-6">
                   Kom langs in mijn atelier
                 </h4>
-                <p className="text-muted-foreground font-business font-bold mb-8">
+                <p className="text-muted-foreground text-lg font-business font-bold mb-8">
                   In mijn atelier kun je mijn werk van dichtbij bekijken. 
-                  Maak een afspraak en ontdek mijn creaties.
+                  Maak een afspraak en ontdek mijn lichtsculpturen en schilderijen.
                 </p>
               </div>
 
-              {/* details */}
+              {/* contactgegevens */}
               <div className="space-y-6">
                 {[
                   {
@@ -77,7 +76,7 @@ const Contact = () => {
                   {
                     icon: MapPin,
                     title: "Atelier",
-                    detail: "Amsterdam, Nederland",
+                    detail: "Nijmegen, Nederland",
                     action: null
                   }
                 ].map((contact, index) => (
@@ -86,7 +85,7 @@ const Contact = () => {
                       <contact.icon className="w-5 h-5 text-primary-foreground" />
                     </div>
                     <div className="flex-1">
-                      <p className="text-sm text-muted-foreground">{contact.title}</p>
+                      <p className="text-md text-muted-foreground">{contact.title}</p>
                       {contact.action ? (
                         <a 
                           href={contact.action}
@@ -102,21 +101,28 @@ const Contact = () => {
                 ))}
               </div>
 
-              {/* CTA */}
               <div className="bg-card p-6 rounded-xl shadow-soft">
                 <h5 className="font-playful text-xl text-accent mb-2">
-                  Bezoek mijn atelier
+                  Wat ik aanbied
                 </h5>
+                <ul className="text-muted-foreground font-business font-bold text-md mb-4 space-y-1 list-disc list-inside">
+                    <li>
+                        Orginele lichtsculpturen op maat
+                    </li>
+                    <li>
+                        Werken voor bedrijven en particulieren
+                    </li>
+                    <li>
+                        Advies over kunstkeuze en plaatsing
+                    </li>
+                </ul>
                 <p className="text-muted-foreground font-business font-bold text-md mb-4">
                   Maak een afspraak voor een persoonlijke kennismaking
                 </p>
-                <Button variant="outline" size="sm">
-                  Afspraak maken
-                </Button>
               </div>
             </div>
 
-            {/* Contact Form */}
+            {/* contactformulier */}
             <div className="bg-card rounded-2xl p-8 shadow-warm">
               <h4 className="text-2xl font-business font-bold text-foreground mb-6">
                 Stuur een bericht
