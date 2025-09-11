@@ -1,6 +1,6 @@
 import { Product } from '../../types/products';
-import lichtsculptuur1 from '@/assets/lichtsculptuur-1.jpg';
-import lichtsculptuur2 from '@/assets/lichtsculptuur-2.jpg';
+import boom1Img from "../../assets/images/boom1.jpg";
+import boom2Img from "../../assets/images/boom2.jpeg";
 
 export const products: Product[] = [
   {
@@ -9,7 +9,7 @@ export const products: Product[] = [
     description: 'Organische vormen in warme aardtinten',
     longDescription: 'Deze prachtige lichtsculptuur brengt de warmte van de herfst in huis. Gemaakt met zorgvuldig geselecteerde materialen die de natuurlijke schoonheid van het seizoen weerspiegelen. De warme LED-verlichting creëert een intieme sfeer die perfect past bij koude herfstavonden.',
     price: 295,
-    images: [lichtsculptuur1, lichtsculptuur2],
+    images: [boom1Img, boom2Img],
     materials: ['Berkenhouten stokken', 'Warme LED-lichtsnoer', 'Biologisch linnen', 'Gevilte wol', 'Denneappels', 'IJzeren ringen'],
     season: 'autumn',
     dimensions: {
@@ -33,7 +33,7 @@ export const products: Product[] = [
     description: 'Minimalistische elegantie voor moderne interieurs',
     longDescription: 'Een tijdloze lichtsculptuur die zich perfect aanpast aan elk modern interieur. De cleane lijnen en neutrale tinten maken deze sculptuur een elegante toevoeging aan elke ruimte. Het zachte licht creëert een serene atmosfeer.',
     price: 275,
-    images: [lichtsculptuur2, lichtsculptuur1],
+    images: [boom1Img, boom2Img],
     materials: ['Beukenhout', 'Warm wit LED-snoer', 'Natuurlijk linnen', 'RVS bevestigingen'],
     season: 'all-seasons',
     dimensions: {

@@ -26,7 +26,7 @@ const ProductDetail = () => {
       <div className="min-h-screen bg-background flex items-center justify-center">
         <div className="text-center">
           <h1 className="text-2xl font-bold mb-4">Product niet gevonden</h1>
-          <Button onClick={() => navigate('/')} variant="warm">
+          <Button onClick={() => navigate('/')} variant="default">
             Terug naar overzicht
           </Button>
         </div>
@@ -219,15 +219,15 @@ const ProductDetail = () => {
 
                 <div className="flex gap-3">
                   <Button 
-                    onClick={handleAddToCart}
+                    // onClick={handleAddToCart}
                     className="flex-1"
-                    variant="warm"
+                    variant="default"
                     size="lg"
                   >
                     <ShoppingCart className="w-5 h-5 mr-2" />
                     Toevoegen aan winkelwagen
                   </Button>
-                  <Button variant="elegant" size="lg">
+                  <Button variant="default" size="lg">
                     Direct bestellen
                   </Button>
                 </div>
