@@ -14,7 +14,7 @@ export const products: Product[] = [
     longDescription: 'Deze prachtige lichtsculptuur brengt de warmte van de herfst in huis. Gemaakt met zorgvuldig geselecteerde materialen die de natuurlijke schoonheid van het seizoen weerspiegelen. De warme LED-verlichting creëert een intieme sfeer die perfect past bij koude herfstavonden.',
     price: 295,
     images: [boom1Img, boom2Img],
-    materials: ['Berkenhouten stokken', 'Warme LED-lichtsnoer', 'IJzeren ringen'],
+    materials: ['Berkenhouten stokken', 'Warm LED-lichtsnoer', 'IJzeren ringen'],
     season: 'autumn',
     dimensions: {
       height: '180 cm',
@@ -62,7 +62,7 @@ export const products: Product[] = [
     longDescription: 'Een mooi schilderij ',
     price: 150,
     images: [schilderij1Img],
-    materials: ['Olieverf op doek', 'licht', 'linnen'],
+    materials: ['Olieverf op doek', 'Licht', 'Linnen'],
     season: 'all-seasons',
     dimensions: {
       height: '40 cm',

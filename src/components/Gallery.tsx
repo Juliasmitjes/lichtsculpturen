@@ -108,7 +108,7 @@ const Gallery = () => {
                 
                 {product.materials && (
                   <p className="text-sm text-accent-warm font-business font-bold mb-4">
-                    Materialen: {product.materials}
+                    Materialen: {product.materials.join(', ')}
                   </p>
                 )}
 
