@@ -1,3 +1,5 @@
+import Header from "../components/Header";
+import Footer from "../components/Footer";
 import { useParams, useNavigate } from 'react-router-dom';
 import { useState, useEffect  } from 'react';
 import { ArrowLeft, Heart, ShoppingCart, Star, Package, Leaf, Clock, Award, X } from 'lucide-react';
@@ -60,8 +62,11 @@ const ProductDetail = () => {
   };
 
   return (
-    <div className="min-h-screen bg-background">
-      <div className="container mx-auto px-4 py-8">
+    <main> 
+      <Header />  
+      <div className="min-h-screen bg-background">
+      
+      <div className="container mx-auto mt-16 px-4 py-8">
 
         {/* terug naar hoofdmenu knop */}
         <Button
@@ -70,7 +75,7 @@ const ProductDetail = () => {
           className="mb-6 hover:bg-secondary/50"
         >
           <ArrowLeft className="w-4 h-4 mr-2" />
-          Terug naar overzicht
+          Terug naar home
         </Button>
 
         <div className="grid lg:grid-cols-2 gap-12">
@@ -261,6 +266,9 @@ const ProductDetail = () => {
         </div>
       </div>
     </div>
+    <Footer />
+   </main>
+    
   );
 };
 

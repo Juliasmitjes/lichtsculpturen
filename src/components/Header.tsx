@@ -1,6 +1,8 @@
 import { useState } from "react";
 import { Menu, X, Palette } from "lucide-react";
 import { Button } from "./ui/button";
+import { Link } from 'react-router-dom';
+
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -29,12 +31,14 @@ const Header = () => {
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center gap-8">
+            <Link to="/#galerij">
             <button 
-              onClick={() => scrollToSection('galerij')}
               className="text-foreground hover:text-primary text-xl font-business font-bold  transition-colors duration-300"
             >
               Galerij
-            </button>
+            </button>        
+            </Link>
+            
             <button 
               onClick={() => scrollToSection('over-mij')}
               className="text-foreground hover:text-primary text-xl font-business font-bold transition-colors duration-300"
