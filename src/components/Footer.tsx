@@ -1,4 +1,5 @@
 import { Heart, Palette } from "lucide-react";
+import { Link } from 'react-router-dom';
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -14,38 +15,41 @@ const Footer = () => {
         <div className="grid md:grid-cols-3 gap-8 items-center">
           
           {/* logo */}
-          <div className="text-center md:text-left">
-            <div className="flex items-center gap-2 justify-center md:justify-start mb-2">
-              <div className="w-8 h-8 bg-primary rounded-full flex items-center justify-center">
-                <Palette className="w-4 h-4 text-primary-foreground" />
+          <Link to="/#hero">
+            <div className="text-center md:text-left">
+              <div className="flex items-center gap-2 justify-center md:justify-start mb-2">
+                <div className="w-8 h-8 bg-primary rounded-full flex items-center justify-center">
+                  <Palette className="w-4 h-4 text-primary-foreground" />
+                </div>
+                <span className="font-business font-bold text-lg">Jacqueline Tiemens</span>
               </div>
-              <span className="font-business font-bold text-lg">Jacqueline Tiemens</span>
+              <p className="font-playful text-accent-light text-sm">
+                Handgemaakte kunst
+              </p>
             </div>
-            <p className="font-playful text-accent-light text-sm">
-              Handgemaakte kunst
-            </p>
-          </div>
-
-         
+          </Link>         
 
           {/* links naar pagina's */}
           <div className="text-center">
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button 
-              onClick={() => scrollToSection('galerij')}
-              className="text-background/80 hover:text-accent transition-colors">
+              <Link to="/#galerij">
+                <button className="text-background/80 hover:text-accent transition-colors">
                 Galerij
-              </button>
-              <button 
-              onClick={() => scrollToSection('over-mij')}
-              className="text-background/80 hover:text-accent transition-colors">
-                Over mij
-              </button>
-              <button 
-              onClick={() => scrollToSection('contact')}
-              className="text-background/80 hover:text-accent transition-colors">
+                </button>             
+              </Link>
+
+              <Link to="/#over-mij">
+                <button className="text-background/80 hover:text-accent transition-colors">
+                  Over mij
+                </button>
+              </ Link>
+
+              <Link to="/#contact">
+              <button className="text-background/80 hover:text-accent transition-colors">
                 Contact
               </button>
+              </Link>
+              
             </div>
           </div>
 
