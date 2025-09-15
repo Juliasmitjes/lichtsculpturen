@@ -15,7 +15,7 @@ export default function Dialog({ open, onClose, children }: DialogProps) {
       <div className="bg-white rounded-lg shadow-lg p-6 w-full max-w-md relative">
         <button
           onClick={onClose}
-          className="absolute top-3 right-3 text-gray-500 hover:text-gray-700"
+          className="absolute top-5 right-5 text-gray-500 hover:text-gray-700"
         >
           <X className="w-5 h-5" />
         </button>

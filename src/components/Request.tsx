@@ -50,7 +50,7 @@ export default function Request ({ quantity }: RequestProps) {
       </Button>
 
       <Dialog open={open} onClose={() => setOpen(false)}>
-        <h2 className="text-lg font-bold mb-4">Vrijblijvend aanvragen</h2>
+        <h2 className="text-lg font-bold mb-4">Vrijblijvend informatie aanvragen</h2>
         <form onSubmit={handleSubmit} className="flex flex-col gap-3">
           <input
             type="text"
@@ -84,7 +84,7 @@ export default function Request ({ quantity }: RequestProps) {
           <Button type="submit">Verzenden</Button>
 
           {showPopup && (
-        <div className="fixed bottom-6 right-6 bg-green-600 text-white px-4 py-2 rounded-lg shadow-lg">
+        <div className="fixed bottom-6 right-6 bg-green-600 font-business font-bold text-white px-4 py-2 rounded-lg shadow-lg">
           Bedankt voor je bericht. Ik neem snel contact met je op!
         </div>
       )}
