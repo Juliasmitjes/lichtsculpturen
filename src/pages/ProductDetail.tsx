@@ -171,7 +171,7 @@ const ProductDetail = () => {
                   <span className="text-green-600 font-business font-bold">Op voorraad - Handgemaakt op bestelling</span>
                 </div>
                 
-                <div className="flex items-center justify-center gap-4 mb-6">
+                <div className="flex items-center gap-4 mb-6">
                   <label htmlFor="quantity" className="font-business font-bold">Aantal:</label>
                   <select
                     id="quantity"

@@ -1,6 +1,6 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Dialog from "./ui/dialog";
-import { Button } from "./ui/button"; // als je al een Tailwind button hebt
+import { Button } from "./ui/button"; 
 
 interface RequestProps {
   quantity: number;
@@ -14,6 +14,10 @@ export default function Request ({ quantity }: RequestProps) {
     phone: "",
     quantity,
   });
+
+   useEffect(() => {
+    setFormData((prev) => ({ ...prev, quantity }));
+  }, [quantity]);
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -38,7 +42,7 @@ export default function Request ({ quantity }: RequestProps) {
             placeholder="Naam"
             value={formData.name}
             onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-            className="border rounded p-2"
+            className="border font-business font-bold rounded p-2"
             required
           />
           <input
@@ -46,21 +50,21 @@ export default function Request ({ quantity }: RequestProps) {
             placeholder="E-mailadres"
             value={formData.email}
             onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-            className="border rounded p-2"
+            className="border font-business font-bold  rounded p-2"
             required
           />
           <input
             type="tel"
-            placeholder="Telefoonnummer"
+            placeholder="Telefoonnummer (optioneel)"
             value={formData.phone}
             onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-            className="border rounded p-2"
+            className="border font-business font-bold  rounded p-2"
           />
           <input
             type="number"
             value={formData.quantity}
             readOnly
-            className="border rounded p-2 bg-gray-100"
+            className="border font-business font-bold  rounded p-2 bg-gray-100"
           />
           <Button type="submit">Verzenden</Button>
         </form>
