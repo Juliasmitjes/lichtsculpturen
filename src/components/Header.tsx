@@ -19,40 +19,40 @@ const Header = () => {
         <div className="flex items-center justify-between">
 
           {/* Logo NOG AANP*/}
-          <div className="flex items-center gap-2 cursor-pointer" onClick={() => scrollToSection('hero')}>
+         <Link to="/#hero" onClick={() => setIsMenuOpen(false)}>
+          <div className="flex items-center gap-2 cursor-pointer">
             <div className="w-10 h-10 bg-primary rounded-full flex items-center justify-center">
               <Palette className="w-5 h-5 text-primary-foreground text-white" />
             </div>
             <div>
-              <h1 className="text-xl font-business font-bold  text-foreground">Jacqueline Tiemens</h1>
+              <h1 className="text-xl font-business font-bold text-foreground">Jacqueline Tiemens</h1>
               <p className="text-sm text-muted-foreground font-playful">Handgemaakte kunst</p>
             </div>
           </div>
+        </Link>
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center gap-8">
-            <Link to="/#galerij">
-            <button 
-              className="text-foreground hover:text-primary text-xl font-business font-bold  transition-colors duration-300"
-            >
+            <Link to="/#galerij" onClick={() => setIsMenuOpen(false)}>
+            <button className="text-foreground hover:text-primary text-xl font-business font-bold  transition-colors duration-300">
               Galerij
             </button>        
             </Link>
-            
-            <button 
-              onClick={() => scrollToSection('over-mij')}
-              className="text-foreground hover:text-primary text-xl font-business font-bold transition-colors duration-300"
-            >
+
+            <Link to="/#over-mij" onClick={() => setIsMenuOpen(false)}>
+             <button className="text-foreground hover:text-primary text-xl font-business font-bold transition-colors duration-300">
               Over mij
             </button>
+            </Link>
+
+            <Link to="/#contact" onClick={() => setIsMenuOpen(false)}>
             <Button 
               variant="organic"
               size="sm"
-              className="font-business text-xl font-bold"
-              onClick={() => scrollToSection('contact')}
-            >
+              className="font-business text-xl font-bold">
               Contact
-            </Button>
+            </Button>  
+            </Link>
           </div>
 
           {/* Mobile Menu Button */}
