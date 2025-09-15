@@ -158,7 +158,7 @@ const ProductDetail = () => {
               </div>
               
               <div className="text-3xl font-bold mb-6 text-primary">
-                €{product.price}
+                {/* €{product.price} */} Prijs op aanvraag
               </div>
             </div>
 
@@ -170,7 +170,7 @@ const ProductDetail = () => {
                   <span className="text-green-600 font-business font-bold">Op voorraad - Handgemaakt op bestelling</span>
                 </div>
                 
-                <div className="flex items-center gap-4 mb-6">
+                <div className="flex items-center justify-center gap-4 mb-6">
                   <label htmlFor="quantity" className="font-business font-bold">Aantal:</label>
                   <select
                     id="quantity"
@@ -186,7 +186,7 @@ const ProductDetail = () => {
                     Vrijblijvend aanvragen
                   </Button>
                 </div>
-                <p className="text-xs text-muted-foreground mt-4 text-center">
+                <p className="text-xs text-muted-foreground mt-4">
                   Gratis verzending binnen Nederland • 30 dagen bedenktijd
                 </p>
               </CardContent>
