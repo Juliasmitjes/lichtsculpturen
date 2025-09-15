@@ -1,5 +1,6 @@
 import Header from "../components/Header";
 import Footer from "../components/Footer";
+import Request from "../components/Request";
 import { useParams, useNavigate } from 'react-router-dom';
 import { useState, useEffect  } from 'react';
 import { ArrowLeft, Heart, ShoppingCart, Star, Package, Leaf, Clock, Award, X } from 'lucide-react';
@@ -182,9 +183,7 @@ const ProductDetail = () => {
                       <option key={num} value={num}>{num}</option>
                     ))}
                   </select>
-                  <Button variant="default" size="lg">
-                    Vrijblijvend aanvragen
-                  </Button>
+                  <Request quantity={quantity} />
                 </div>
                 <p className="text-xs text-muted-foreground mt-4">
                   Gratis verzending binnen Nederland • 30 dagen bedenktijd
