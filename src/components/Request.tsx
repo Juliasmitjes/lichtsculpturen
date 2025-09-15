@@ -8,6 +8,9 @@ interface RequestProps {
 
 export default function Request ({ quantity }: RequestProps) {
   const [open, setOpen] = useState(false);
+  const [showPopup, setShowPopup] = useState(false);
+  const [errorPopup, setErrorPopup] = useState(false);
+
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -19,14 +22,26 @@ export default function Request ({ quantity }: RequestProps) {
     setFormData((prev) => ({ ...prev, quantity }));
   }, [quantity]);
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    alert("Bericht verzonden!");
-    setOpen(false);
+ const handleSubmit = async (e: React.FormEvent) => {
+  e.preventDefault();
 
-    // Hier kan je backend call doen, bv:
-    // fetch("/api/send-request", { method: "POST", body: JSON.stringify(formData) })
-  };
+  try {
+    const res = await fetch("/api/send-request", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(formData),
+    });
+
+    if (!res.ok) throw new Error("Request failed");
+
+    setShowPopup(true);
+    setFormData({ name: "", email: "", phone: "", quantity });
+    setTimeout(() => setShowPopup(false), 3000);
+  } catch (error) {
+    setErrorPopup(true);
+    setTimeout(() => setErrorPopup(false), 4000);
+  }
+};
 
   return (
     <>
@@ -67,6 +82,19 @@ export default function Request ({ quantity }: RequestProps) {
             className="border font-business font-bold  rounded p-2 bg-gray-100"
           />
           <Button type="submit">Verzenden</Button>
+
+          {showPopup && (
+        <div className="fixed bottom-6 right-6 bg-green-600 text-white px-4 py-2 rounded-lg shadow-lg">
+          Bedankt voor je bericht. Ik neem snel contact met je op!
+        </div>
+      )}
+
+      {errorPopup && (
+        <div className="fixed bottom-6 right-6 bg-red-600 font-business font-bold text-white px-4 py-2 rounded-lg shadow-lg">
+          Er is iets misgegaan. Probeer het opnieuw.
+        </div>
+      )}
+
         </form>
       </Dialog>
     </>
